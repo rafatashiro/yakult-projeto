@@ -1,37 +1,27 @@
 :root {
-  --bg: #faf8f5;
-  --surface: #ffffff;
-  --ink: #1f1a17;
-  --muted: #6b625b;
-  --line: #e6e0d8;
-  --red: #c8102e;
-  --red-soft: #fbe9ec;
-  --green: #2f7d4f;
-  --green-soft: #e6f2ea;
-  --blue: #2a5d9f;
-  --blue-soft: #e8f0fa;
-  --amber: #a56a00;
-  --amber-soft: #fcf3de;
+  color-scheme: light;
+  /* Paleta única: cor do leite fermentado (creme levemente amarelado) */
+  --bg: #f6efdc;
+  --surface: #fffaf0;
+  --ink: #241d15;
+  --muted: #6a5d49;
+  --line: #e4d9bd;
+  --red: #b80f2b;
+  --red-soft: #f8e3dc;
+  --green: #2a6f46;
+  --green-soft: #e3eed9;
+  --blue: #2a5590;
+  --blue-soft: #e3ebf1;
+  --amber: #8f5c00;
+  --amber-soft: #f7ead0;
   --radius: 14px;
   --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #14110f;
-    --surface: #1d1916;
-    --ink: #f1ebe4;
-    --muted: #a69c92;
-    --line: #342d28;
-    --red: #ff5a73;
-    --red-soft: #3a1c22;
-    --green: #6cc08a;
-    --green-soft: #1b2e22;
-    --blue: #7fb0f0;
-    --blue-soft: #182534;
-    --amber: #e5b04d;
-    --amber-soft: #33290f;
-  }
+  /* Camadas do respingo de leite */
+  --milk-front-a: #fffcf3;
+  --milk-front-b: #fbf4df;
+  --milk-back: #ebdfc0;
+  --milk-glow: 118, 88, 36;
 }
 
 * { box-sizing: border-box; }
@@ -230,4 +220,28 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
   h2 { font-size: 24px; margin-top: 48px; }
   .nav { font-size: 13px; gap: 2px; }
   .nav a { padding: 5px 10px; }
+}
+
+/* Fundo de leite (decorativo: SVG + CSS, com parallax leve via assets/milk.js) */
+body { position: relative; }
+.milk-bg {
+  position: absolute; top: 0; left: 0; right: 0; height: 560px;
+  z-index: -1; pointer-events: none; overflow: hidden;
+}
+.milk-bg svg { display: block; width: 100%; height: 100%; }
+.milk-stop-a { stop-color: var(--milk-front-a); }
+.milk-stop-b { stop-color: var(--milk-front-b); }
+.milk-back { fill: var(--milk-back); }
+.milk-front { fill: url(#milk-grad); }
+.milk-glow { fill: none; stroke: rgb(var(--milk-glow)); stroke-linejoin: round; }
+.milk-glow.g1 { stroke-width: 26; stroke-opacity: 0.030; }
+.milk-glow.g2 { stroke-width: 14; stroke-opacity: 0.045; }
+.milk-glow.g3 { stroke-width: 5;  stroke-opacity: 0.060; }
+.milk-bg [data-speed] { will-change: transform; }
+.milk-bg--soft { height: 380px; opacity: 0.75; }
+
+@media (max-width: 600px) {
+  .milk-bg { height: 420px; }
+  .milk-bg--soft { height: 300px; }
+  .milk-bg svg { opacity: 0.7; }
 }
