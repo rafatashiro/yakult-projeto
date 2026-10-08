@@ -98,8 +98,8 @@ a:hover { text-decoration-thickness: 2px; }
 section[id] { scroll-margin-top: 112px; }
 
 /* Hero */
-.hero { padding: 56px 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.hero-img { flex: none; width: 190px; height: auto; filter: drop-shadow(0 14px 18px rgba(80, 55, 20, .18)); }
+.hero { padding: 56px 0 40px; }
+.h1-img { height: 1.1em; width: auto; aspect-ratio: 359 / 713; vertical-align: -0.14em; margin-right: 0.24em; filter: drop-shadow(0 3px 4px rgba(80, 55, 20, .22)); }
 .eyebrow {
   display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--red);
@@ -214,8 +214,7 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
   .brand { font-size: 16px; }
   .brand-icon { height: 20px; }
   body { font-size: 16px; }
-  .hero { padding-top: 32px; flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
-  .hero-img { width: 120px; }
+  .hero { padding-top: 44px; }
   h2 { font-size: 24px; margin-top: 48px; }
   .nav { font-size: 13px; gap: 2px; }
   .nav a { padding: 5px 10px; }
