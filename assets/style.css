@@ -58,7 +58,7 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
   text-decoration: none; color: var(--ink); line-height: 1;
 }
-.brand-icon { flex: none; width: auto; height: 28px; }
+.brand-icon { flex: none; height: 22px; width: auto; aspect-ratio: 359 / 713; object-fit: contain; }
 .brand-name { white-space: nowrap; }
 .brand:hover .brand-icon { transform: rotate(-6deg); }
 .brand-icon { transition: transform .2s ease; }
@@ -212,7 +212,7 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
 
 @media (max-width: 600px) {
   .brand { font-size: 16px; }
-  .brand-icon { height: 26px; }
+  .brand-icon { height: 20px; }
   body { font-size: 16px; }
   .hero { padding-top: 32px; flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
   .hero-img { width: 120px; }
