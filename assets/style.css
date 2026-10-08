@@ -1,11 +1,11 @@
 :root {
   color-scheme: light;
   /* Paleta única: cor do leite fermentado (creme levemente amarelado) */
-  --bg: #f6efdc;
-  --surface: #fffaf0;
+  --bg: #fbf6e7;
+  --surface: #fffdf6;
   --ink: #241d15;
   --muted: #6a5d49;
-  --line: #e4d9bd;
+  --line: #e9e0c8;
   --red: #b80f2b;
   --red-soft: #f8e3dc;
   --green: #2a6f46;
@@ -18,9 +18,9 @@
   --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Camadas do respingo de leite */
-  --milk-front-a: #fffcf3;
-  --milk-front-b: #fbf4df;
-  --milk-back: #ebdfc0;
+  --milk-front-a: #fffefa;
+  --milk-front-b: #fdf9ec;
+  --milk-back: #f2e9d0;
   --milk-glow: 118, 88, 36;
 }
 
@@ -58,11 +58,8 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
   text-decoration: none; color: var(--ink); line-height: 1;
 }
-.brand-icon { flex: none; width: 26px; height: 22px; }
+.brand-icon { flex: none; width: auto; height: 28px; }
 .brand-name { white-space: nowrap; }
-.bi-cap { fill: var(--red); }
-.bi-body { fill: var(--surface); stroke: var(--red); stroke-width: 1.5; stroke-linejoin: miter; }
-.bi-band { fill: var(--red); }
 .brand:hover .brand-icon { transform: rotate(-6deg); }
 .brand-icon { transition: transform .2s ease; }
 .nav { display: flex; gap: 6px; font-size: 14px; }
@@ -101,7 +98,8 @@ a:hover { text-decoration-thickness: 2px; }
 section[id] { scroll-margin-top: 112px; }
 
 /* Hero */
-.hero { padding: 72px 0 40px; }
+.hero { padding: 56px 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.hero-img { flex: none; width: 190px; height: auto; filter: drop-shadow(0 14px 18px rgba(80, 55, 20, .18)); }
 .eyebrow {
   display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--red);
@@ -214,9 +212,10 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
 
 @media (max-width: 600px) {
   .brand { font-size: 16px; }
-  .brand-icon { width: 24px; height: 20px; }
+  .brand-icon { height: 26px; }
   body { font-size: 16px; }
-  .hero { padding-top: 44px; }
+  .hero { padding-top: 32px; flex-direction: column-reverse; align-items: flex-start; gap: 18px; }
+  .hero-img { width: 120px; }
   h2 { font-size: 24px; margin-top: 48px; }
   .nav { font-size: 13px; gap: 2px; }
   .nav a { padding: 5px 10px; }
