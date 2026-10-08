@@ -5,7 +5,7 @@ Site do projeto final de **Tópicos em Engenharia de Produção na Indústria de
 ## Estrutura
 
 - `index.html`: página inicial com a lista de etapas
-- `etapa-1.html`: cadeia produtiva, de suprimentos e de valor, insights, roteiro do pitch e fontes
+- `etapa-1.html`: cadeia produtiva, de suprimentos e de valor, insights e fontes
 - `assets/style.css`: estilos de todo o site
 
 Site estático, sem build. Para ver localmente, abra `index.html` no navegador.
