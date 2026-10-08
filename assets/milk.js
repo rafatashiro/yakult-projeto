@@ -1,30 +1,35 @@
-/* Parallax leve do fundo de leite: só transform, só enquanto o fundo está visível. */
+/* Parallax do fundo de leite: cada camada oscila em ritmos diferentes ao longo de TODA a rolagem.
+   Só usa transform (camadas na GPU), roda em requestAnimationFrame e respeita "reduzir movimento". */
 (function () {
   var root = document.querySelector('.milk-bg');
   if (!root) return;
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var layers = Array.prototype.slice.call(root.querySelectorAll('[data-speed]'));
-  var limit = root.offsetHeight;
+  var layers = Array.prototype.slice.call(root.querySelectorAll('.milk-layer')).map(function (el) {
+    return {
+      el: el,
+      ay: parseFloat(el.getAttribute('data-ay')) || 0,
+      ax: parseFloat(el.getAttribute('data-ax')) || 0,
+      per: parseFloat(el.getAttribute('data-per')) || 400,
+      ph: parseFloat(el.getAttribute('data-ph')) || 0
+    };
+  });
   var ticking = false;
 
   function frame() {
     ticking = false;
-    var y = Math.min(window.scrollY, limit);
+    var s = window.scrollY;
     for (var i = 0; i < layers.length; i++) {
-      var g = layers[i];
-      var speed = parseFloat(g.getAttribute('data-speed')) || 0;
-      var sway = parseFloat(g.getAttribute('data-sway')) || 0;
-      var phase = parseFloat(g.getAttribute('data-phase')) || 0;
-      var x = sway ? Math.sin(y / 170 + phase) * sway : 0;
-      g.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + (y * speed).toFixed(1) + 'px,0)';
+      var L = layers[i];
+      // subtrai o valor em s=0 para a composição do topo ficar exatamente como desenhada
+      var ty = (Math.sin(s / L.per + L.ph) - Math.sin(L.ph)) * L.ay;
+      var tx = (Math.cos(s / (L.per * 1.35) + L.ph) - Math.cos(L.ph)) * L.ax;
+      L.el.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
     }
   }
 
   window.addEventListener('scroll', function () {
-    if (window.scrollY > limit + 40 && !ticking) return;
     if (!ticking) { ticking = true; window.requestAnimationFrame(frame); }
   }, { passive: true });
-  window.addEventListener('resize', function () { limit = root.offsetHeight; frame(); });
   frame();
 })();

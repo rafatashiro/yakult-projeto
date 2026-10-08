@@ -10,44 +10,92 @@
 <body>
 
 <div class="milk-bg milk-bg--soft" aria-hidden="true">
-  <svg viewBox="0 0 1440 560" preserveAspectRatio="xMaxYMin slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="milk-grad" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" class="milk-stop-a"/>
         <stop offset="1" class="milk-stop-b"/>
       </linearGradient>
-      <path id="m-wave-b" d="M-300 0 H1040 C1064 130 1016 214 920 274 C816 338 744 462 586 452 C440 442 392 342 252 358 C152 367 74 446 0 410 L-300 410 Z"/>
-      <path id="m-wave-f" d="M-300 0 H1010 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
-      <path id="m-blob-1" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
-      <path id="m-blob-2" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
     </defs>
-    <g data-speed="0.10"><use href="#m-wave-b" class="milk-back"/></g>
-    <g data-speed="0.16">
-      <use href="#m-wave-f" class="milk-glow g1"/><use href="#m-wave-f" class="milk-glow g2"/><use href="#m-wave-f" class="milk-glow g3"/>
-      <use href="#m-wave-f" class="milk-front"/>
-    </g>
-    <g data-speed="0.24" data-sway="10" data-phase="0">
-      <use href="#m-blob-1" class="milk-glow g1"/><use href="#m-blob-1" class="milk-glow g2"/><use href="#m-blob-1" class="milk-glow g3"/>
-      <use href="#m-blob-1" class="milk-front"/>
-    </g>
-    <g data-speed="0.31" data-sway="14" data-phase="1.6">
-      <use href="#m-blob-2" class="milk-glow g1"/><use href="#m-blob-2" class="milk-glow g2"/><use href="#m-blob-2" class="milk-glow g3"/>
-      <use href="#m-blob-2" class="milk-front"/>
-    </g>
-    <g data-speed="0.40" data-sway="18" data-phase="3.1">
-      <circle class="milk-glow g2" cx="1050" cy="66" r="9"/><circle class="milk-front" cx="1050" cy="66" r="9"/>
-      <circle class="milk-glow g2" cx="1040" cy="248" r="14"/><circle class="milk-front" cx="1040" cy="248" r="14"/>
-      <circle class="milk-glow g2" cx="1380" cy="84" r="11"/><circle class="milk-front" cx="1380" cy="84" r="11"/>
-      <circle class="milk-glow g2" cx="1230" cy="40" r="6"/><circle class="milk-front" cx="1230" cy="40" r="6"/>
-      <circle class="milk-glow g2" cx="1404" cy="270" r="7"/><circle class="milk-front" cx="1404" cy="270" r="7"/>
-    </g>
+  </svg>
+  <svg class="milk-layer" data-ay="26" data-ax="18" data-per="520" data-ph="0.0" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-back" d="M-300 -300 H1040 V0 C1064 130 1016 214 920 274 C816 338 744 462 586 452 C440 442 392 342 252 358 C152 367 74 446 0 410 L-300 410 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="40" data-ax="30" data-per="430" data-ph="1.1" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-glow g2" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-glow g3" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-front" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="70" data-ax="50" data-per="340" data-ph="2.2" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-glow g2" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-glow g3" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-front" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="100" data-ax="70" data-per="280" data-ph="0.7" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-glow g2" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-glow g3" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-front" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <circle class="milk-glow g1" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g2" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g3" cx="1050" cy="66" r="9"/>
+    <circle class="milk-front" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g1" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g2" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g3" cx="1040" cy="248" r="14"/>
+    <circle class="milk-front" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g1" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g2" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g3" cx="1380" cy="84" r="11"/>
+    <circle class="milk-front" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g1" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g2" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g3" cx="1230" cy="40" r="6"/>
+    <circle class="milk-front" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g1" cx="1404" cy="270" r="7"/>
+    <circle class="milk-glow g2" cx="1404" cy="270" r="7"/>
+    <circle class="milk-glow g3" cx="1404" cy="270" r="7"/>
+    <circle class="milk-front" cx="1404" cy="270" r="7"/>
+  </svg>
+  <svg class="milk-layer" data-ay="30" data-ax="24" data-per="560" data-ph="3.4" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-back" d="M1800 1250 H430 V900 C410 790 460 704 550 654 C650 596 730 482 890 490 C1030 498 1080 592 1220 580 C1320 572 1400 504 1440 534 L1800 534 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="46" data-ax="36" data-per="450" data-ph="4.2" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-glow g2" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-glow g3" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-front" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="90" data-ax="60" data-per="300" data-ph="5.1" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g2" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g3" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-front" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g1" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-glow g2" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-glow g3" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-front" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <circle class="milk-glow g1" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g2" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g3" cx="470" cy="700" r="10"/>
+    <circle class="milk-front" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g1" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g2" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g3" cx="90" cy="610" r="7"/>
+    <circle class="milk-front" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g1" cx="420" cy="840" r="12"/>
+    <circle class="milk-glow g2" cx="420" cy="840" r="12"/>
+    <circle class="milk-glow g3" cx="420" cy="840" r="12"/>
+    <circle class="milk-front" cx="420" cy="840" r="12"/>
   </svg>
 </div>
 
 
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M9.5 2.5h5a.8.8 0 0 1 .8.8v1.4a.8.8 0 0 1-.8.8h-5a.8.8 0 0 1-.8-.8V3.3a.8.8 0 0 1 .8-.8z" class="bi-cap"/><path d="M10 5.5h4l1.1 2.4c.5 1 .9 1.7.9 2.8V19a2.5 2.5 0 0 1-2.5 2.5h-3A2.5 2.5 0 0 1 8 19v-8.3c0-1.1.4-1.8.9-2.8L10 5.5z" class="bi-body"/><rect x="8" y="12.5" width="8" height="4.5" class="bi-band"/></svg><span class="brand-name">Yakult Trad. 80ml</span></a>
+    <a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 26 22" width="26" height="22" aria-hidden="true" focusable="false"><rect x="9.5" y="1" width="7" height="3" rx="0.6" class="bi-cap"/><polygon points="10.5,4 15.5,4 15.5,6.2 22,10 22,20 4,20 4,10 10.5,6.2" class="bi-body"/><rect x="4" y="12.6" width="18" height="4.4" class="bi-band"/></svg><span class="brand-name">Yakult Trad. 80ml</span></a>
     <nav class="nav" aria-label="Principal">
       <a href="index.html">Início</a>
       <a href="etapa-1.html" aria-current="page">Etapa 1</a>

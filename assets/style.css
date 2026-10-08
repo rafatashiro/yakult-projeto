@@ -58,10 +58,10 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 800; font-size: 18px; letter-spacing: -0.02em;
   text-decoration: none; color: var(--ink); line-height: 1;
 }
-.brand-icon { flex: none; }
+.brand-icon { flex: none; width: 26px; height: 22px; }
 .brand-name { white-space: nowrap; }
 .bi-cap { fill: var(--red); }
-.bi-body { fill: var(--surface); stroke: var(--red); stroke-width: 1.6; stroke-linejoin: round; }
+.bi-body { fill: var(--surface); stroke: var(--red); stroke-width: 1.5; stroke-linejoin: miter; }
 .bi-band { fill: var(--red); }
 .brand:hover .brand-icon { transform: rotate(-6deg); }
 .brand-icon { transition: transform .2s ease; }
@@ -214,7 +214,7 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
 
 @media (max-width: 600px) {
   .brand { font-size: 16px; }
-  .brand-icon { width: 20px; height: 20px; }
+  .brand-icon { width: 24px; height: 20px; }
   body { font-size: 16px; }
   .hero { padding-top: 44px; }
   h2 { font-size: 24px; margin-top: 48px; }
@@ -222,13 +222,15 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
   .nav a { padding: 5px 10px; }
 }
 
-/* Fundo de leite (decorativo: SVG + CSS, com parallax leve via assets/milk.js) */
-body { position: relative; }
+/* Fundo de leite: camadas fixas na tela (cada uma sobe para a GPU), com parallax em assets/milk.js */
 .milk-bg {
-  position: absolute; top: 0; left: 0; right: 0; height: 560px;
-  z-index: -1; pointer-events: none; overflow: hidden;
+  position: fixed; inset: 0; z-index: -1;
+  pointer-events: none; overflow: hidden;
 }
-.milk-bg svg { display: block; width: 100%; height: 100%; }
+.milk-layer {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  will-change: transform; transform: translate3d(0, 0, 0);
+}
 .milk-stop-a { stop-color: var(--milk-front-a); }
 .milk-stop-b { stop-color: var(--milk-front-b); }
 .milk-back { fill: var(--milk-back); }
@@ -237,11 +239,9 @@ body { position: relative; }
 .milk-glow.g1 { stroke-width: 26; stroke-opacity: 0.030; }
 .milk-glow.g2 { stroke-width: 14; stroke-opacity: 0.045; }
 .milk-glow.g3 { stroke-width: 5;  stroke-opacity: 0.060; }
-.milk-bg [data-speed] { will-change: transform; }
-.milk-bg--soft { height: 380px; opacity: 0.75; }
+.milk-bg--soft { opacity: 0.8; }
 
 @media (max-width: 600px) {
-  .milk-bg { height: 420px; }
-  .milk-bg--soft { height: 300px; }
-  .milk-bg svg { opacity: 0.7; }
+  .milk-bg { opacity: 0.85; }
+  .milk-bg--soft { opacity: 0.7; }
 }

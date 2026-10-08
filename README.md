@@ -7,6 +7,7 @@ Site do projeto final de **Tópicos em Engenharia de Produção na Indústria de
 - `index.html`: página inicial com a lista de etapas
 - `etapa-1.html`: cadeia produtiva, de suprimentos e de valor, insights e fontes
 - `assets/style.css`: estilos de todo o site
+- `assets/milk.js`: movimento (parallax) do fundo de leite ao rolar a página
 
 Site estático, sem build. Para ver localmente, abra `index.html` no navegador.
 
