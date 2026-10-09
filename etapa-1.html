@@ -433,6 +433,15 @@
     if (d < 0 || y <= brandRow.offsetHeight) { topbar.classList.add('show-brand'); } else { topbar.classList.remove('show-brand'); }
   }
 
+  /* Ao abrir ou recarregar (F5), o cabeçalho completo aparece, mesmo se o navegador restaurar a rolagem no meio da página */
+  function estadoInicial() {
+    lastY = window.scrollY;
+    lock = Date.now() + 800;
+    if (small.matches) { topbar.classList.add('show-brand'); }
+  }
+  estadoInicial();
+  window.addEventListener('pageshow', function () { estadoInicial(); update(); });
+
   var ticking = false;
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; window.requestAnimationFrame(function () { direcao(); update(); ticking = false; }); }
