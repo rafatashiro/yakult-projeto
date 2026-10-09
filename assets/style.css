@@ -287,8 +287,8 @@ tbody th { font-size: inherit; font-weight: 700; text-transform: none; letter-sp
 footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 
 @media (max-width: 600px) {
-  .topbar { top: var(--brand-up, 0px); transition: top .2s ease; }
-  .topbar.show-brand { top: 0; }
+  .topbar { will-change: transform; transition: transform .25s cubic-bezier(.2, .7, .2, 1); }
+  .topbar.hide-brand { transform: translate3d(0, calc(-1 * var(--brand-h, 0px)), 0); }
   .brand { font-size: 16px; }
   .brand-icon { height: 20px; }
   body { font-size: 16px; }

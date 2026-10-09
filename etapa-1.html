@@ -421,23 +421,23 @@
     if (bar && max > 0) bar.style.width = Math.min(100, Math.max(0, (window.scrollY / max) * 100)) + '%';
   }
 
-  /* Celular: a linha da marca some ao rolar para baixo e volta ao rolar para cima */
-  var lastY = window.scrollY, lock = 0;
+  /* Celular: a linha da marca desliza para cima ao rolar para baixo e volta ao rolar para cima.
+     O JS só troca uma classe (sem ler layout no scroll); quem anima é o CSS, com transform. */
+  var brandH = 0, lastY = window.scrollY, lock = 0;
   links.forEach(function (a) { a.addEventListener('click', function () { lock = Date.now() + 1200; }); });
   function direcao() {
-    if (!small.matches) { topbar.classList.remove('show-brand'); return; }
+    if (!small.matches) { topbar.classList.remove('hide-brand'); lastY = window.scrollY; return; }
     var y = window.scrollY, d = y - lastY;
     if (Math.abs(d) < 6) return;
     lastY = y;
     if (Date.now() < lock) return;
-    if (d < 0 || y <= brandRow.offsetHeight) { topbar.classList.add('show-brand'); } else { topbar.classList.remove('show-brand'); }
+    if (d < 0 || y <= brandH) { topbar.classList.remove('hide-brand'); } else { topbar.classList.add('hide-brand'); }
   }
-
   /* Ao abrir ou recarregar (F5), o cabeçalho completo aparece, mesmo se o navegador restaurar a rolagem no meio da página */
   function estadoInicial() {
     lastY = window.scrollY;
     lock = Date.now() + 800;
-    if (small.matches) { topbar.classList.add('show-brand'); }
+    topbar.classList.remove('hide-brand');
   }
   estadoInicial();
   window.addEventListener('pageshow', function () { estadoInicial(); update(); });
@@ -446,13 +446,14 @@
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; window.requestAnimationFrame(function () { direcao(); update(); ticking = false; }); }
   }, { passive: true });
-  /* No celular, a linha da marca sobe junto com a rolagem e só as abas ficam fixas */
+  /* Medidas do cabeçalho (só ao carregar e ao redimensionar, nunca durante a rolagem) */
   function medirCabecalho() {
-    var up = small.matches ? brandRow.offsetHeight : 0;
-    document.documentElement.style.setProperty('--brand-up', (-up) + 'px');
-    document.documentElement.style.setProperty('--stick', (topbar.offsetHeight - up) + 'px');
+    brandH = small.matches ? brandRow.offsetHeight : 0;
+    var r = document.documentElement.style;
+    r.setProperty('--brand-h', brandH + 'px');
+    r.setProperty('--stick', (topbar.offsetHeight - brandH) + 'px');
   }
-  window.addEventListener('resize', function () { medirCabecalho(); update(); });
+  window.addEventListener('resize', function () { medirCabecalho(); direcao(); update(); });
   medirCabecalho();
   update();
 })();
