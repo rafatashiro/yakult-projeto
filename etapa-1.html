@@ -5,9 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Etapa 1 · Yakult - Tópicos em Eng. Prod. Ind. Alimentos</title>
   <meta name="description" content="Etapa 1 do projeto final: cadeia produtiva, cadeia de suprimentos e cadeia de valor do Leite Fermentado Yakult.">
+  <meta name="theme-color" content="#fbf6e7">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Etapa 1 · Yakult - Tópicos em Eng. Prod. Ind. Alimentos">
+  <meta property="og:description" content="Etapa 1 do projeto final: cadeia produtiva, cadeia de suprimentos e cadeia de valor do Leite Fermentado Yakult.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
 
 <div class="milk-bg milk-bg--soft" aria-hidden="true">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -95,7 +104,7 @@
 
 <header class="topbar">
   <div class="wrap">
-    <a class="brand" href="index.html"><img class="brand-icon" src="assets/yakult-frasco.webp" width="11" height="22" alt="" decoding="async"><span class="brand-name">Yakult Trad. 80ml</span></a>
+    <a class="brand" href="index.html"><img class="brand-icon" src="assets/yakult-frasco.webp" width="11" height="22" alt="" decoding="async"><span class="brand-name">Yakult Trad. 80&nbsp;ml</span></a>
     <nav class="nav" aria-label="Principal">
       <a href="index.html">Início</a>
       <a href="etapa-1.html" aria-current="page">Etapa 1</a>
@@ -103,10 +112,12 @@
   </div>
   <nav class="tabs" aria-label="Seções da Etapa 1">
     <div class="wrap tabs-row">
+      <a href="#produto">Produto</a>
       <a href="#conceitos">Conceitos</a>
       <a href="#produtiva">Produtiva</a>
       <a href="#suprimentos">Suprimentos</a>
       <a href="#valor">Valor</a>
+      <a href="#diferenca">Comparativo</a>
       <a href="#insights">Insights</a>
       <a href="#limitacoes">Limitações</a>
       <a href="#fontes">Fontes</a>
@@ -115,7 +126,7 @@
   <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
 </header>
 
-<main class="wrap">
+<main class="wrap" id="main">
 
   <section class="hero">
     <span class="eyebrow">Etapa 1 · Projeto Final</span>
@@ -158,71 +169,10 @@
     <h2>1 · Cadeia produtiva: leite e laticínios fermentados</h2>
     <p class="sub">Contexto de setor. É a mesma para a Yakult e para todos os concorrentes.</p>
 
-    <figure class="diagram">
-      <svg viewBox="0 0 940 360" role="img" aria-labelledby="t1 d1" xmlns="http://www.w3.org/2000/svg">
-        <title id="t1">Cadeia produtiva do leite fermentado</title>
-        <desc id="d1">Insumos agropecuários, produtor de leite, captação e resfriamento, laticínios, indústria de fermentados onde está a Yakult, centro de distribuição, varejo e venda direta, e consumidor final, com cadeias paralelas de açúcar, plástico, aromas e transporte refrigerado.</desc>
-        <defs>
-          <marker id="ah1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0 0 L10 5 L0 10 z" class="svg-arrow"/>
-          </marker>
-        </defs>
-
-        <!-- Linha 1 -->
-        <rect class="svg-p" x="20" y="30" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="110" y="64" text-anchor="middle">Insumos agropecuários</text>
-        <text class="svg-t sm" x="110" y="84" text-anchor="middle">ração, genética, sanidade</text>
-
-        <rect class="svg-p" x="260" y="30" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="350" y="64" text-anchor="middle">Produtor de leite</text>
-        <text class="svg-t sm" x="350" y="84" text-anchor="middle">pecuária leiteira</text>
-
-        <rect class="svg-p" x="500" y="30" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="590" y="64" text-anchor="middle">Captação</text>
-        <text class="svg-t sm" x="590" y="84" text-anchor="middle">coleta e resfriamento</text>
-
-        <rect class="svg-p" x="740" y="30" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="830" y="64" text-anchor="middle">Laticínios</text>
-        <text class="svg-t sm" x="830" y="84" text-anchor="middle">leite e leite desnatado</text>
-
-        <line class="svg-line" x1="200" y1="72" x2="258" y2="72" marker-end="url(#ah1)"/>
-        <line class="svg-line" x1="440" y1="72" x2="498" y2="72" marker-end="url(#ah1)"/>
-        <line class="svg-line" x1="680" y1="72" x2="738" y2="72" marker-end="url(#ah1)"/>
-        <line class="svg-line" x1="830" y1="114" x2="830" y2="168" marker-end="url(#ah1)"/>
-
-        <!-- Linha 2 (da direita para a esquerda) -->
-        <rect class="svg-v" x="740" y="170" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="830" y="204" text-anchor="middle">Fermentados e probióticos</text>
-        <text class="svg-t sm" x="830" y="224" text-anchor="middle">Yakult está aqui</text>
-        <text class="svg-t sm" x="830" y="240" text-anchor="middle">(Nestlé, Danone, Vigor…)</text>
-
-        <rect class="svg-p" x="500" y="170" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="590" y="204" text-anchor="middle">Centro de distribuição</text>
-        <text class="svg-t sm" x="590" y="224" text-anchor="middle">armazenagem e expedição</text>
-
-        <rect class="svg-p" x="260" y="170" width="180" height="38" rx="9"/>
-        <text class="svg-t b" x="350" y="186" text-anchor="middle">Varejo</text>
-        <text class="svg-t sm" x="350" y="201" text-anchor="middle">supermercados</text>
-
-        <rect class="svg-v" x="260" y="216" width="180" height="38" rx="9"/>
-        <text class="svg-t b" x="350" y="232" text-anchor="middle">Venda direta</text>
-        <text class="svg-t sm" x="350" y="247" text-anchor="middle">porta a porta</text>
-
-        <rect class="svg-p" x="20" y="170" width="180" height="84" rx="10"/>
-        <text class="svg-t b" x="110" y="204" text-anchor="middle">Consumidor final</text>
-        <text class="svg-t sm" x="110" y="224" text-anchor="middle">famílias, adultos, idosos</text>
-
-        <line class="svg-line" x1="740" y1="212" x2="682" y2="212" marker-end="url(#ah1)"/>
-        <path class="svg-line" d="M500 212 H470 V189 H442" marker-end="url(#ah1)"/>
-        <path class="svg-line" d="M470 212 V235 H442" marker-end="url(#ah1)"/>
-        <line class="svg-line" x1="260" y1="189" x2="202" y2="189" marker-end="url(#ah1)"/>
-        <line class="svg-line" x1="260" y1="235" x2="202" y2="235" marker-end="url(#ah1)"/>
-
-        <!-- Paralelas -->
-        <rect class="svg-a" x="20" y="288" width="900" height="56" rx="10"/>
-        <text class="svg-t b" x="470" y="312" text-anchor="middle">Cadeias paralelas que abastecem a indústria</text>
-        <text class="svg-t sm" x="470" y="330" text-anchor="middle">açúcar (sucroenergético) · resina plástica (petroquímico) · aromas · embalagens · transporte refrigerado</text>
-      </svg>
+    <figure class="diagram" data-fig="fig1">
+      <div class="dg-wide"></div>
+      <div class="dg-narrow"></div>
+      <noscript><p class="sub">O diagrama precisa de JavaScript. Os mesmos elos estão descritos no texto desta seção.</p></noscript>
       <figcaption>Figura 1. Cadeia produtiva do setor lácteo, com a posição da Yakult no elo de fermentados.</figcaption>
     </figure>
 
@@ -256,100 +206,10 @@
     <h2>2 · Cadeia de suprimentos da Yakult</h2>
     <p class="sub">A rede própria da marca: quem fornece, onde é feito e como chega ao consumidor.</p>
 
-    <figure class="diagram">
-      <svg viewBox="0 0 980 440" role="img" aria-labelledby="t2 d2" xmlns="http://www.w3.org/2000/svg">
-        <title id="t2">Cadeia de suprimentos da Yakult</title>
-        <desc id="d2">Fornecedores de leite desnatado, açúcar e essência, resina plástica, cepa Shirota e embalagens alimentam a fábrica de Lorena. Depois o produto vai a câmaras refrigeradas, caminhões refrigerados, um centro de distribuição e dois canais: venda domiciliar e varejo, até o consumidor final.</desc>
-        <defs>
-          <marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0 0 L10 5 L0 10 z" class="svg-arrow"/>
-          </marker>
-        </defs>
-
-        <text class="svg-t h" x="20" y="22">Fornecedores</text>
-
-        <rect class="svg-s" x="20" y="34" width="200" height="56" rx="10"/>
-        <text class="svg-t b" x="120" y="58" text-anchor="middle">Leite desnatado</text>
-        <text class="svg-t sm" x="120" y="75" text-anchor="middle">origem não divulgada</text>
-
-        <rect class="svg-s" x="20" y="100" width="200" height="56" rx="10"/>
-        <text class="svg-t b" x="120" y="124" text-anchor="middle">Açúcar e essência</text>
-        <text class="svg-t sm" x="120" y="141" text-anchor="middle">fornecedores não divulgados</text>
-
-        <rect class="svg-s" x="20" y="166" width="200" height="56" rx="10"/>
-        <text class="svg-t b" x="120" y="190" text-anchor="middle">Resina plástica</text>
-        <text class="svg-t sm" x="120" y="207" text-anchor="middle">matéria-prima dos frascos</text>
-
-        <rect class="svg-v" x="20" y="232" width="200" height="56" rx="10"/>
-        <text class="svg-t b" x="120" y="256" text-anchor="middle">Cepa Shirota</text>
-        <text class="svg-t sm" x="120" y="273" text-anchor="middle">probiótico exclusivo do grupo</text>
-
-        <rect class="svg-s" x="20" y="298" width="200" height="56" rx="10"/>
-        <text class="svg-t b" x="120" y="322" text-anchor="middle">Embalagens</text>
-        <text class="svg-t sm" x="120" y="339" text-anchor="middle">mini pacotes e caixas maiores</text>
-
-        <line class="svg-line" x1="220" y1="62" x2="288" y2="62" marker-end="url(#ah2)"/>
-        <line class="svg-line" x1="220" y1="128" x2="288" y2="128" marker-end="url(#ah2)"/>
-        <line class="svg-line" x1="220" y1="194" x2="288" y2="194" marker-end="url(#ah2)"/>
-        <line class="svg-line" x1="220" y1="260" x2="288" y2="260" marker-end="url(#ah2)"/>
-        <line class="svg-line" x1="220" y1="326" x2="288" y2="326" marker-end="url(#ah2)"/>
-
-        <text class="svg-t h" x="290" y="22">Complexo Industrial de Lorena (SP)</text>
-        <rect class="svg-box" x="290" y="34" width="250" height="320" rx="12"/>
-
-        <rect class="svg-s" x="308" y="48" width="214" height="44" rx="8"/>
-        <text class="svg-t" x="415" y="75" text-anchor="middle">Esterilização do leite</text>
-        <rect class="svg-s" x="308" y="104" width="214" height="44" rx="8"/>
-        <text class="svg-t" x="415" y="131" text-anchor="middle">Fermentação com a cepa</text>
-        <rect class="svg-s" x="308" y="160" width="214" height="44" rx="8"/>
-        <text class="svg-t" x="415" y="187" text-anchor="middle">Mistura: xarope + essência</text>
-        <rect class="svg-v" x="308" y="216" width="214" height="44" rx="8"/>
-        <text class="svg-t b" x="415" y="243" text-anchor="middle">Frascos feitos na fábrica</text>
-        <rect class="svg-s" x="308" y="272" width="214" height="44" rx="8"/>
-        <text class="svg-t" x="415" y="299" text-anchor="middle">Envase e embalagem</text>
-        <text class="svg-t sm" x="415" y="341" text-anchor="middle">Liberação pelo Controle de Qualidade</text>
-
-        <text class="svg-t h" x="590" y="22">Frio e distribuição</text>
-        <rect class="svg-s" x="590" y="40" width="170" height="60" rx="10"/>
-        <text class="svg-t b" x="675" y="67" text-anchor="middle">Câmaras refrigeradas</text>
-        <text class="svg-t sm" x="675" y="85" text-anchor="middle">estoque até a liberação</text>
-        <rect class="svg-s" x="590" y="140" width="170" height="60" rx="10"/>
-        <text class="svg-t b" x="675" y="167" text-anchor="middle">Caminhões refrigerados</text>
-        <text class="svg-t sm" x="675" y="185" text-anchor="middle">transporte em frio</text>
-        <rect class="svg-s" x="590" y="240" width="170" height="70" rx="10"/>
-        <text class="svg-t b" x="675" y="268" text-anchor="middle">Centro de distribuição</text>
-        <text class="svg-t sm" x="675" y="286" text-anchor="middle">armazenagem e expedição</text>
-
-        <path class="svg-line" d="M540 70 H588" marker-end="url(#ah2)"/>
-        <line class="svg-line" x1="675" y1="100" x2="675" y2="138" marker-end="url(#ah2)"/>
-        <line class="svg-line" x1="675" y1="200" x2="675" y2="238" marker-end="url(#ah2)"/>
-
-        <text class="svg-t h" x="800" y="22">Canais de venda</text>
-        <rect class="svg-v" x="800" y="40" width="160" height="92" rx="10"/>
-        <text class="svg-t b" x="880" y="66" text-anchor="middle">Venda domiciliar</text>
-        <text class="svg-t sm" x="880" y="84" text-anchor="middle">Yakult Ladies</text>
-        <text class="svg-t sm" x="880" y="100" text-anchor="middle">(comerciantes autônomas)</text>
-        <text class="svg-t sm" x="880" y="118" text-anchor="middle">R$ 1,80–2,20 por frasco</text>
-
-        <rect class="svg-s" x="800" y="170" width="160" height="92" rx="10"/>
-        <text class="svg-t b" x="880" y="196" text-anchor="middle">Varejo</text>
-        <text class="svg-t sm" x="880" y="214" text-anchor="middle">supermercados e</text>
-        <text class="svg-t sm" x="880" y="230" text-anchor="middle">minimercados</text>
-        <text class="svg-t sm" x="880" y="248" text-anchor="middle">R$ 2,15–2,83 por frasco</text>
-
-        <path class="svg-line" d="M760 275 H780 V86 H798" marker-end="url(#ah2)"/>
-        <path class="svg-line" d="M780 216 H798" marker-end="url(#ah2)"/>
-
-        <rect class="svg-p" x="800" y="330" width="160" height="50" rx="10"/>
-        <text class="svg-t b" x="880" y="360" text-anchor="middle">Consumidor final</text>
-        <path class="svg-line" d="M960 86 H972 V355 H962" marker-end="url(#ah2)"/>
-        <path class="svg-line" d="M960 216 H972"/>
-
-        <rect class="svg-v" x="20" y="402" width="14" height="14" rx="3"/>
-        <text class="svg-t sm" x="42" y="414">diferencial da Yakult</text>
-        <rect class="svg-s" x="190" y="402" width="14" height="14" rx="3"/>
-        <text class="svg-t sm" x="212" y="414">elo comum no setor</text>
-      </svg>
+    <figure class="diagram" data-fig="fig2">
+      <div class="dg-wide"></div>
+      <div class="dg-narrow"></div>
+      <noscript><p class="sub">O diagrama precisa de JavaScript. Os mesmos elos estão descritos no texto desta seção.</p></noscript>
       <figcaption>Figura 2. Cadeia de suprimentos do Leite Fermentado Yakult. Os fornecedores de leite e açúcar não são divulgados. O centro de distribuição representa a etapa logística intermediária; a localização e a operação dos centros da Yakult não são públicas. Preços por frasco são faixas observadas no mercado pelo grupo.</figcaption>
     </figure>
 
@@ -380,69 +240,10 @@
     <h2>3 · Cadeia de valor (Porter)</h2>
     <p class="sub">Como a Yakult transforma insumos em um produto pelo qual o cliente paga.</p>
 
-    <figure class="diagram">
-      <svg viewBox="0 0 980 420" role="img" aria-labelledby="t3 d3" xmlns="http://www.w3.org/2000/svg">
-        <title id="t3">Cadeia de valor da Yakult segundo Porter</title>
-        <desc id="d3">Quatro atividades de apoio sobre cinco atividades primárias, culminando em margem.</desc>
-
-        <text class="svg-t sm" x="20" y="18">ATIVIDADES DE APOIO</text>
-
-        <rect class="svg-a" x="20" y="28" width="800" height="38" rx="8"/>
-        <text class="svg-t" x="34" y="52"><tspan class="b" font-weight="700">Infraestrutura</tspan>  ·  gestão da qualidade; complexo industrial de Lorena, modernizado em 2013 e 2022</text>
-
-        <rect class="svg-a" x="20" y="72" width="800" height="38" rx="8"/>
-        <text class="svg-t" x="34" y="96"><tspan font-weight="700">Pessoas</tspan>  ·  apoio e fortalecimento da rede de Yakult Ladies (comerciantes autônomas)</text>
-
-        <rect class="svg-a" x="20" y="116" width="800" height="38" rx="8"/>
-        <text class="svg-t" x="34" y="140"><tspan font-weight="700">P&amp;D e tecnologia</tspan>  ·  Instituto Central Yakult (Tóquio); cepa Shirota; domínio da fermentação</text>
-
-        <rect class="svg-a" x="20" y="160" width="800" height="38" rx="8"/>
-        <text class="svg-t" x="34" y="184"><tspan font-weight="700">Aquisição</tspan>  ·  leite desnatado, açúcar, essência e resina dos frascos (fornecedores não divulgados)</text>
-
-        <text class="svg-t sm" x="20" y="218">ATIVIDADES PRIMÁRIAS</text>
-
-        <!-- 5 caixas -->
-        <rect class="svg-s" x="20" y="226" width="156" height="174" rx="10"/>
-        <text class="svg-t b" x="98" y="250" text-anchor="middle">Logística de entrada</text>
-        <text class="svg-t sm" x="98" y="276" text-anchor="middle">Leite desnatado,</text>
-        <text class="svg-t sm" x="98" y="292" text-anchor="middle">açúcar, essência e</text>
-        <text class="svg-t sm" x="98" y="308" text-anchor="middle">resina dos frascos;</text>
-        <text class="svg-t sm" x="98" y="324" text-anchor="middle">cepa proprietária</text>
-
-        <rect class="svg-s" x="184" y="226" width="156" height="174" rx="10"/>
-        <text class="svg-t b" x="262" y="250" text-anchor="middle">Operações</text>
-        <text class="svg-t sm" x="262" y="276" text-anchor="middle">Esterilização,</text>
-        <text class="svg-t sm" x="262" y="292" text-anchor="middle">fermentação, mistura,</text>
-        <text class="svg-t sm" x="262" y="308" text-anchor="middle">frascos próprios e</text>
-        <text class="svg-t sm" x="262" y="324" text-anchor="middle">envase em Lorena</text>
-
-        <rect class="svg-s" x="348" y="226" width="156" height="174" rx="10"/>
-        <text class="svg-t b" x="426" y="250" text-anchor="middle">Logística de saída</text>
-        <text class="svg-t sm" x="426" y="276" text-anchor="middle">Câmaras frias,</text>
-        <text class="svg-t sm" x="426" y="292" text-anchor="middle">caminhões e centros</text>
-        <text class="svg-t sm" x="426" y="308" text-anchor="middle">de distribuição até</text>
-        <text class="svg-t sm" x="426" y="324" text-anchor="middle">os pontos de venda</text>
-
-        <rect class="svg-v" x="512" y="226" width="156" height="174" rx="10"/>
-        <text class="svg-t b" x="590" y="250" text-anchor="middle">Marketing e vendas</text>
-        <text class="svg-t sm" x="590" y="276" text-anchor="middle">Porta a porta + varejo</text>
-        <text class="svg-t sm" x="590" y="292" text-anchor="middle">Campanhas por versão</text>
-        <text class="svg-t sm" x="590" y="308" text-anchor="middle">Frasco vermelho:</text>
-        <text class="svg-t sm" x="590" y="324" text-anchor="middle">versão tradicional</text>
-
-        <rect class="svg-v" x="676" y="226" width="144" height="174" rx="10"/>
-        <text class="svg-t b" x="748" y="250" text-anchor="middle">Serviço</text>
-        <text class="svg-t sm" x="748" y="276" text-anchor="middle">Entrega recorrente</text>
-        <text class="svg-t sm" x="748" y="292" text-anchor="middle">em casa; a Yakult</text>
-        <text class="svg-t sm" x="748" y="308" text-anchor="middle">Lady explica o</text>
-        <text class="svg-t sm" x="748" y="324" text-anchor="middle">benefício do probiótico</text>
-
-        <!-- Margem -->
-        <path class="svg-v" d="M830 28 H922 L962 214 L922 400 H830 Z"/>
-        <text class="svg-t h" x="892" y="206" text-anchor="middle">MARGEM</text>
-        <text class="svg-t sm" x="892" y="226" text-anchor="middle">valor percebido</text>
-        <text class="svg-t sm" x="892" y="242" text-anchor="middle">pelo cliente</text>
-      </svg>
+    <figure class="diagram" data-fig="fig3">
+      <div class="dg-wide"></div>
+      <div class="dg-narrow"></div>
+      <noscript><p class="sub">O diagrama precisa de JavaScript. Os mesmos elos estão descritos no texto desta seção.</p></noscript>
       <figcaption>Figura 3. Cadeia de valor da Yakult. Em vermelho, as atividades que mais diferenciam a marca.</figcaption>
     </figure>
 
@@ -462,17 +263,17 @@
 
   <!-- Comparativo -->
   <section id="diferenca">
-    <h2>Qual a diferença entre as cadeias do Yakult?</h2>
+    <h2>Comparativo das três cadeias</h2>
     <div class="table-wrap">
-      <table>
+      <table class="stack">
         <thead>
-          <tr><th></th><th>Produtiva</th><th>Suprimentos</th><th>Valor</th></tr>
+          <tr><th scope="col"><span class="sr-only">Critério</span></th><th scope="col">Produtiva</th><th scope="col">Suprimentos</th><th scope="col">Valor</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>Escopo</strong></td><td>O setor lácteo inteiro</td><td>A rede da marca Yakult</td><td>As atividades dentro da Yakult</td></tr>
-          <tr><td><strong>Pergunta</strong></td><td>Em que mercado estamos?</td><td>Como o produto chega pronto ao cliente?</td><td>Por que o cliente paga por ele?</td></tr>
-          <tr><td><strong>Específica da Yakult?</strong></td><td>Não. É igual para todos os concorrentes</td><td>Em parte: frasco próprio, fábrica única, dois canais</td><td>Sim: cepa exclusiva + porta a porta</td></tr>
-          <tr><td><strong>Principal risco</strong></td><td>Preço e oferta do leite, regulação</td><td>Fábrica única e cadeia de frio</td><td>Dependência de autônomas e de um só probiótico</td></tr>
+          <tr><th scope="row">Escopo</th><td data-label="Produtiva">O setor lácteo inteiro</td><td data-label="Suprimentos">A rede da marca Yakult</td><td data-label="Valor">As atividades dentro da Yakult</td></tr>
+          <tr><th scope="row">Pergunta</th><td data-label="Produtiva">Em que mercado estamos?</td><td data-label="Suprimentos">Como o produto chega pronto ao cliente?</td><td data-label="Valor">Por que o cliente paga por ele?</td></tr>
+          <tr><th scope="row">Específica da Yakult?</th><td data-label="Produtiva">Não. É igual para todos os concorrentes</td><td data-label="Suprimentos">Em parte: frasco próprio, fábrica única, dois canais</td><td data-label="Valor">Sim: cepa exclusiva + porta a porta</td></tr>
+          <tr><th scope="row">Principal risco</th><td data-label="Produtiva">Preço e oferta do leite, regulação</td><td data-label="Suprimentos">Fábrica única e cadeia de frio</td><td data-label="Valor">Dependência de autônomas e de um só probiótico</td></tr>
         </tbody>
       </table>
     </div>
@@ -488,14 +289,14 @@
     <h3>2. Possibilidades de gestão e melhoria, por cadeia</h3>
     <div class="grid three">
       <div class="card">
-        <h3>Produtiva</h3>
+        <h4>Produtiva</h4>
         <ul>
           <li>Contratos de longo prazo ou parcerias com laticínios para reduzir a volatilidade do preço do leite.</li>
           <li>Acompanhar a oferta de leite e a regulação do setor como risco estratégico.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Suprimentos</h3>
+        <h4>Suprimentos</h4>
         <ul>
           <li>Previsão de demanda por canal e região, essencial com validade curta.</li>
           <li>Roteirização e monitoramento da cadeia de frio.</li>
@@ -503,7 +304,7 @@
         </ul>
       </div>
       <div class="card">
-        <h3>Valor</h3>
+        <h4>Valor</h4>
         <ul>
           <li>Ferramentas digitais de pedido e relacionamento para as Yakult Ladies.</li>
           <li>Usar dados de recompra para fidelizar.</li>
@@ -513,7 +314,7 @@
     </div>
 
     <h3>3. Qual a diferença entre as cadeias deste produto?</h3>
-    <p>Veja a tabela acima. A síntese: a cadeia produtiva é comum a todos, a de suprimentos é onde a Yakult se organiza de forma própria, e a de valor é o que torna a marca difícil de copiar.</p>
+    <p>Veja o <a href="#diferenca">comparativo</a> acima. A síntese: a cadeia produtiva é comum a todos, a de suprimentos é onde a Yakult se organiza de forma própria, e a de valor é o que torna a marca difícil de copiar.</p>
 
     <div class="callout red">
       <strong>A tese do grupo</strong>
@@ -526,15 +327,15 @@
     <h2>Limitações do estudo</h2>
     <p class="sub">Esta etapa usa apenas fontes públicas. Alguns itens do guia dependem de dados que a empresa não divulga, que estão em bases pagas ou que ficaram fora do escopo desta etapa. Em vez de estimar, indicamos o que não foi possível afirmar.</p>
     <div class="table-wrap">
-      <table>
-        <thead><tr><th>Tema do guia</th><th>Limitação</th></tr></thead>
+      <table class="stack">
+        <thead><tr><th scope="col">Tema do guia</th><th scope="col">Limitação</th></tr></thead>
         <tbody>
-          <tr><td>Participação de mercado atual</td><td>Só achamos foto de 2001. Relatórios atuais são pagos</td></tr>
-          <tr><td>Número de produtores e peso do setor</td><td>O último censo é de 2017 e a estimativa da Embrapa usa dados de 2006. O peso econômico aparece como VBP, não como participação no PIB. O VBP do leite (R$ 71,5 bi, Mapa) equivale a cerca de 5% do VBP agropecuário total de R$ 1,48 tri (CNA), mas as duas fontes usam metodologias diferentes: a própria CNA indica o leite com 19,7% do VBP pecuário, o que daria perto de 7% do total. Por isso falamos em "entre 5% e 7%". A participação da Yakult nesse total não é pública</td></tr>
-          <tr><td>Exportações e importações de lácteos</td><td>Disponíveis só em gráficos de fonte oficial</td></tr>
-          <tr><td>Quem fornece leite e açúcar à Yakult</td><td>Não divulgado</td></tr>
-          <tr><td>ERP, RFID e centros de distribuição</td><td>Não divulgados. A localização e a operação dos centros de distribuição da Yakult não são públicas, por isso os diagramas mostram essa etapa de forma genérica</td></tr>
-          <tr><td>Logística reversa e certificações no Brasil</td><td>Só dados globais do grupo</td></tr>
+          <tr><th scope="row">Participação de mercado atual</th><td data-label="Limitação">Só achamos foto de 2001. Relatórios atuais são pagos</td></tr>
+          <tr><th scope="row">Número de produtores e peso do setor</th><td data-label="Limitação">O último censo é de 2017 e a estimativa da Embrapa usa dados de 2006. O peso econômico aparece como VBP, não como participação no PIB. O VBP do leite (R$ 71,5 bi, Mapa) equivale a cerca de 5% do VBP agropecuário total de R$ 1,48 tri (CNA), mas as duas fontes usam metodologias diferentes: a própria CNA indica o leite com 19,7% do VBP pecuário, o que daria perto de 7% do total. Por isso falamos em "entre 5% e 7%". A participação da Yakult nesse total não é pública</td></tr>
+          <tr><th scope="row">Exportações e importações de lácteos</th><td data-label="Limitação">Disponíveis só em gráficos de fonte oficial</td></tr>
+          <tr><th scope="row">Quem fornece leite e açúcar à Yakult</th><td data-label="Limitação">Não divulgado</td></tr>
+          <tr><th scope="row">ERP, RFID e centros de distribuição</th><td data-label="Limitação">Não divulgados. A localização e a operação dos centros de distribuição da Yakult não são públicas, por isso os diagramas mostram essa etapa de forma genérica</td></tr>
+          <tr><th scope="row">Logística reversa e certificações no Brasil</th><td data-label="Limitação">Só dados globais do grupo</td></tr>
         </tbody>
       </table>
     </div>
@@ -588,6 +389,10 @@
   if (!links.length) return;
   var row = document.querySelector('.tabs-row');
   var bar = document.getElementById('progress-bar');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var topbar = document.querySelector('.topbar');
+  var brandRow = topbar.querySelector('.wrap');
+  var small = window.matchMedia ? window.matchMedia('(max-width: 600px)') : { matches: false };
   var ids = links.map(function (a) { return a.getAttribute('href').slice(1); });
   var sections = ids.map(function (id) { return document.getElementById(id); });
 
@@ -597,13 +402,13 @@
       if (on) { a.setAttribute('aria-current', 'true'); } else { a.removeAttribute('aria-current'); }
       if (on && row && row.scrollWidth > row.clientWidth) {
         var target = a.offsetLeft - (row.clientWidth - a.offsetWidth) / 2;
-        row.scrollTo({ left: target, behavior: 'smooth' });
+        row.scrollTo({ left: target, behavior: reduce ? 'auto' : 'smooth' });
       }
     });
   }
 
   function update() {
-    var hh = document.querySelector('.topbar').offsetHeight;
+    var hh = topbar.getBoundingClientRect().bottom;
     var y = window.scrollY + hh + 24;
     var current = null;
     for (var k = 0; k < sections.length; k++) {
@@ -620,11 +425,19 @@
   window.addEventListener('scroll', function () {
     if (!ticking) { ticking = true; window.requestAnimationFrame(function () { update(); ticking = false; }); }
   }, { passive: true });
-  window.addEventListener('resize', update);
+  /* No celular, a linha da marca sobe junto com a rolagem e só as abas ficam fixas */
+  function medirCabecalho() {
+    var up = small.matches ? brandRow.offsetHeight : 0;
+    document.documentElement.style.setProperty('--brand-up', (-up) + 'px');
+    document.documentElement.style.setProperty('--stick', (topbar.offsetHeight - up) + 'px');
+  }
+  window.addEventListener('resize', function () { medirCabecalho(); update(); });
+  medirCabecalho();
   update();
 })();
 </script>
 
+<script src="assets/diagramas.js" defer></script>
 <script src="assets/milk.js" defer></script>
 </body>
 </html>

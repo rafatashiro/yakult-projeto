@@ -8,6 +8,8 @@ Site do projeto final de **Tópicos em Engenharia de Produção na Indústria de
 - `etapa-1.html`: cadeia produtiva, de suprimentos e de valor, insights e fontes
 - `assets/style.css`: estilos de todo o site
 - `assets/milk.js`: movimento (parallax) do fundo de leite ao rolar a página
+- `assets/diagramas.js`: **fonte única** das 3 figuras da Etapa 1. Edite os textos aqui e as duas versões (larga em SVG e vertical para celular) mudam juntas
+- `assets/fonts/`: fonte Inter (licença OFL) hospedada junto com o site
 
 Site estático, sem build. Para ver localmente, abra `index.html` no navegador.
 
