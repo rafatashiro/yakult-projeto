@@ -428,6 +428,8 @@
   function direcao() {
     if (!small.matches) { topbar.classList.remove('hide-brand'); lastY = window.scrollY; return; }
     var y = window.scrollY, d = y - lastY;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (y < 0 || y > max) return; /* efeito elástico (iPhone) no topo e no fim da página */
     if (Math.abs(d) < 6) return;
     lastY = y;
     if (Date.now() < lock) return;
