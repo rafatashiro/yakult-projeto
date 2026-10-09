@@ -421,26 +421,16 @@
     if (bar && max > 0) bar.style.width = Math.min(100, Math.max(0, (window.scrollY / max) * 100)) + '%';
   }
 
-  /* Celular: a linha da marca some ao rolar para baixo e volta ao rolar para cima.
-     O movimento usa só transform (feito pela placa de vídeo), por isso desliza sem travar. */
-  var lastY = window.scrollY, lock = 0, shown = false;
+  /* Celular: a linha da marca some ao rolar para baixo e volta ao rolar para cima */
+  var lastY = window.scrollY, lock = 0;
   links.forEach(function (a) { a.addEventListener('click', function () { lock = Date.now() + 1200; }); });
-  function aplicar(prev) {
-    var bh = brandRow.offsetHeight, y = Math.max(0, window.scrollY);
-    var shift = (small.matches && shown) ? Math.min(y, bh) : 0;
-    /* perto do topo o cabeçalho acompanha a rolagem pixel a pixel, sem animação própria */
-    topbar.style.transition = (y <= bh && prev === shown) ? 'none' : '';
-    topbar.style.transform = shift ? 'translate3d(0,' + shift + 'px,0)' : '';
-  }
   function direcao() {
-    if (!small.matches) { shown = false; aplicar(shown); return; }
+    if (!small.matches) { topbar.classList.remove('show-brand'); return; }
     var y = window.scrollY, d = y - lastY;
     if (Math.abs(d) < 6) return;
     lastY = y;
     if (Date.now() < lock) return;
-    var prev = shown;
-    shown = d < 0;
-    aplicar(prev);
+    if (d < 0 || y <= brandRow.offsetHeight) { topbar.classList.add('show-brand'); } else { topbar.classList.remove('show-brand'); }
   }
 
   var ticking = false;
@@ -453,7 +443,7 @@
     document.documentElement.style.setProperty('--brand-up', (-up) + 'px');
     document.documentElement.style.setProperty('--stick', (topbar.offsetHeight - up) + 'px');
   }
-  window.addEventListener('resize', function () { medirCabecalho(); direcao(); update(); });
+  window.addEventListener('resize', function () { medirCabecalho(); update(); });
   medirCabecalho();
   update();
 })();
