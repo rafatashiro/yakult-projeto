@@ -140,6 +140,18 @@ ul, ol { padding-left: 22px; }
 li { margin: 6px 0; }
 .sub { color: var(--muted); margin-top: 0; }
 
+/* Posição do produto na cadeia */
+h2.h-sm { font-size: 20px; margin: 36px 0 10px; }
+.trail { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 4px; align-items: center; }
+.trail li { margin: 0; display: flex; align-items: center; gap: 4px; }
+.trail li + li::before { content: "›"; color: var(--muted); font-size: 18px; line-height: 1; }
+.trail li span {
+  padding: 5px 10px; border-radius: 999px; background: var(--surface);
+  border: 1px solid var(--line); font-size: 13.5px; font-weight: 500;
+}
+.trail li span.here { background: var(--red-soft); border-color: color-mix(in srgb, var(--red) 40%, transparent); color: var(--red); font-weight: 700; }
+#posicao .sub { margin-top: 10px; font-size: 15px; }
+
 /* Cards */
 .grid { display: grid; gap: 14px; }
 .grid.two { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
