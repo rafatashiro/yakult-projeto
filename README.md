@@ -13,19 +13,22 @@ O projeto é entregue em etapas. Cada etapa vira uma página nova do site.
 | Etapa | Conteúdo | Status |
 | --- | --- | --- |
 | 1 | Cadeia produtiva, cadeia de suprimentos e cadeia de valor, com 3 diagramas, comparativo, insights para o engenheiro de gestão, limitações do estudo e fontes | Entregue |
-| 2 | A definir | Em breve |
+| 2 | Beer Game: regras, estratégia, nível de serviço, estoques, demanda e custos por rodada, Learning Café e relação com a cadeia da Yakult | Entregue |
 
 ## Estrutura
 
 ```
 index.html            página inicial (apresentação e lista de etapas)
 etapa-1.html          conteúdo completo da Etapa 1
+etapa-2.html          Etapa 2 (Beer Game)
 assets/
   style.css           estilos de todo o site
   diagramas.js        fonte única dos diagramas (veja abaixo)
+  header.js           abas, barra de progresso e cabeçalho recolhível (Etapas 1 e 2)
   milk.js             movimento (parallax) do fundo de leite ao rolar
   fonts/              fonte Inter hospedada junto com o site (licença OFL)
   yakult-frasco.webp  imagem do frasco usada no título e no cabeçalho
+  learning-cafe.webp  foto do cartaz do Learning Café (Etapa 2)
   favicon.png, apple-touch-icon.png
 ```
 
@@ -33,7 +36,7 @@ Site estático: HTML, CSS e JavaScript puros, **sem build e sem dependências**.
 
 ## Como editar
 
-**Textos da Etapa 1:** direto em `etapa-1.html`.
+**Textos das etapas:** direto em `etapa-1.html` e `etapa-2.html`. Os números do Beer Game estão em tabelas no `etapa-2.html`; as barras são HTML/CSS (largura em %), então mudar um valor exige ajustar a largura da barra junto.
 
 **Diagramas (Figuras 1, 2 e 3):** edite apenas `assets/diagramas.js`. Dele saem duas versões automaticamente: o desenho largo (SVG, telas a partir de 900 px) e uma lista vertical para celular e tablet. Mudou um texto lá, as duas versões mudam juntas. O arquivo tem um comentário no topo explicando os campos. Posição e tamanho das caixas valem só para o desenho largo. A legenda de cada figura fica no `<figcaption>` do `etapa-1.html`.
 

@@ -339,3 +339,20 @@ footer { margin-top: 80px; padding: 32px 0 56px; border-top: 1px solid var(--lin
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* ---- Etapa 2: gráficos de barras em HTML/CSS e foto do Learning Café ---- */
+.bars { margin: 16px 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.bars li { display: grid; grid-template-columns: 8.5em 1fr; gap: 4px 12px; align-items: center; margin: 0; }
+.bars .bl { font-size: 14px; font-weight: 600; }
+.bars .bt { position: relative; height: 26px; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.bars .bf { display: block; height: 100%; min-width: 3px; background: var(--blue); border-radius: 0 6px 6px 0; }
+.bars .bf.r { background: var(--red); }
+.bars .bf.g { background: var(--green); }
+.bars .bf.a { background: var(--amber); }
+.bars .bv { grid-column: 2; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: -2px; }
+.bars-grp { margin: 18px 0 6px; font-size: 14px; font-weight: 700; }
+.fig-foto { margin: 18px 0; }
+.fig-foto img { display: block; width: 100%; max-width: 460px; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+.fig-foto figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; }
+td.num, th.num { font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) { .bars li { grid-template-columns: 1fr; } .bars .bv { grid-column: 1; } }

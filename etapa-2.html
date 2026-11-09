@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etapa 2 · Yakult - Tópicos em Eng. Prod. Ind. Alimentos</title>
+  <meta name="description" content="Etapa 2 do projeto final: resultados do Beer Game, com níveis de serviço, estoques, demanda e custos da cadeia, e a relação com a cadeia da Yakult.">
+  <meta name="theme-color" content="#fbf6e7">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Etapa 2 · Yakult - Tópicos em Eng. Prod. Ind. Alimentos">
+  <meta property="og:description" content="Etapa 2 do projeto final: resultados do Beer Game, com níveis de serviço, estoques, demanda e custos da cadeia, e a relação com a cadeia da Yakult.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Vercel Web Analytics (equivale ao inject() do pacote; só funciona no site publicado na Vercel) -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<div class="milk-bg milk-bg--soft" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="milk-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" class="milk-stop-a"/>
+        <stop offset="1" class="milk-stop-b"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <svg class="milk-layer" data-ay="26" data-ax="18" data-per="520" data-ph="0.0" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-back" d="M-300 -300 H1040 V0 C1064 130 1016 214 920 274 C816 338 744 462 586 452 C440 442 392 342 252 358 C152 367 74 446 0 410 L-300 410 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="40" data-ax="30" data-per="430" data-ph="1.1" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-glow g2" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-glow g3" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-front" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="70" data-ax="50" data-per="340" data-ph="2.2" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-glow g2" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-glow g3" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-front" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="100" data-ax="70" data-per="280" data-ph="0.7" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-glow g2" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-glow g3" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-front" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <circle class="milk-glow g1" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g2" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g3" cx="1050" cy="66" r="9"/>
+    <circle class="milk-front" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g1" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g2" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g3" cx="1040" cy="248" r="14"/>
+    <circle class="milk-front" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g1" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g2" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g3" cx="1380" cy="84" r="11"/>
+    <circle class="milk-front" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g1" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g2" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g3" cx="1230" cy="40" r="6"/>
+    <circle class="milk-front" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g1" cx="1404" cy="270" r="7"/>
+    <circle class="milk-glow g2" cx="1404" cy="270" r="7"/>
+    <circle class="milk-glow g3" cx="1404" cy="270" r="7"/>
+    <circle class="milk-front" cx="1404" cy="270" r="7"/>
+  </svg>
+  <svg class="milk-layer" data-ay="30" data-ax="24" data-per="560" data-ph="3.4" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-back" d="M1800 1250 H430 V900 C410 790 460 704 550 654 C650 596 730 482 890 490 C1030 498 1080 592 1220 580 C1320 572 1400 504 1440 534 L1800 534 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="46" data-ax="36" data-per="450" data-ph="4.2" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-glow g2" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-glow g3" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-front" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="90" data-ax="60" data-per="300" data-ph="5.1" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g2" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g3" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-front" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g1" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-glow g2" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-glow g3" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-front" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <circle class="milk-glow g1" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g2" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g3" cx="470" cy="700" r="10"/>
+    <circle class="milk-front" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g1" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g2" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g3" cx="90" cy="610" r="7"/>
+    <circle class="milk-front" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g1" cx="420" cy="840" r="12"/>
+    <circle class="milk-glow g2" cx="420" cy="840" r="12"/>
+    <circle class="milk-glow g3" cx="420" cy="840" r="12"/>
+    <circle class="milk-front" cx="420" cy="840" r="12"/>
+  </svg>
+</div>
+
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-icon" src="assets/yakult-frasco.webp" width="11" height="22" alt="" decoding="async"><span class="brand-name">Yakult Trad. 80&nbsp;ml</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="etapa-1.html">Etapa 1</a>
+      <a href="etapa-2.html" aria-current="page">Etapa 2</a>
+    </nav>
+  </div>
+  <nav class="tabs" aria-label="Seções da Etapa 2">
+    <div class="wrap tabs-row">
+      <a href="#regras">Regras</a>
+      <a href="#estrategia">Estratégia</a>
+      <a href="#servico">Serviço</a>
+      <a href="#estoques">Estoques</a>
+      <a href="#demanda">Demanda</a>
+      <a href="#custos">Custos</a>
+      <a href="#turma">Turma</a>
+      <a href="#learning">Learning Café</a>
+      <a href="#yakult">Yakult</a>
+    </div>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="hero">
+    <span class="eyebrow">Etapa 2 · Beer Game</span>
+    <h1>Beer Game: o que a nossa cadeia aprendeu em 36 semanas</h1>
+    <p class="lede">Simulamos em aula uma cadeia de quatro elos (varejista, distribuidor, fábrica e fornecedor) em três rodadas. Aqui estão as regras, os números do nosso grupo e o que eles ensinam sobre a cadeia da Yakult.</p>
+  </section>
+
+  <section id="regras">
+    <h2>Regras das rodadas</h2>
+    <div class="card">
+      <p>Éramos quatro participantes: <strong>varejista, distribuidor, fábrica e fornecedor</strong>. Cada rodada tinha <strong>12 semanas</strong>, e cada um administrava o próprio estoque e atendia aos pedidos recebidos do elo seguinte da cadeia.</p>
+      <p>O desafio era equilibrar duas situações: manter estoque suficiente para atender aos pedidos e evitar excesso, porque estoque gera custo, mas deixar de atender à demanda gera uma penalização ainda maior.</p>
+    </div>
+  </section>
+
+  <section id="estrategia">
+    <h2>Estratégia a cada rodada</h2>
+    <div class="grid">
+      <div class="card"><span class="tag">Rodada 1</span><h3>Estoque alto, sem conhecer a demanda</h3><p>Começamos com estoques iniciais muito elevados: 10.000 unidades no varejista, 5.000 no distribuidor e 10.000 na fábrica.</p></div>
+      <div class="card"><span class="tag">Rodada 2</span><h3>Estoque menor e reposição ao longo das semanas</h3><p>Começamos com estoques menores e passamos a fazer pedidos de reposição a cada período.</p></div>
+      <div class="card"><span class="tag">Rodada 3</span><h3>Mais instabilidade</h3><p>Tínhamos previsão de demanda, mas a cadeia não ajustou estoques e reposições de forma eficiente. Os estoques foram consumidos, os pedidos em atraso cresceram e os custos subiram.</p></div>
+    </div>
+  </section>
+
+  <section id="servico">
+    <h2>Nível de serviço</h2>
+    <p class="sub">Percentual da demanda atendida por cada participante em cada rodada.</p>
+    <div class="table-wrap"><table class="stack"><caption class="sr-only">Nível de serviço por participante e rodada</caption><thead><tr><th scope="col">Participante</th><th scope="col">Rodada 1</th><th scope="col">Rodada 2</th><th scope="col">Rodada 3</th></tr></thead><tbody><tr><th scope="row">Varejista</th><td class="num" data-label="Rodada 1">100%</td><td class="num" data-label="Rodada 2">98,09%</td><td class="num" data-label="Rodada 3">92,98%</td></tr><tr><th scope="row">Distribuidor</th><td class="num" data-label="Rodada 1">N/A</td><td class="num" data-label="Rodada 2">100%</td><td class="num" data-label="Rodada 3">80,06%</td></tr><tr><th scope="row">Fábrica</th><td class="num" data-label="Rodada 1">N/A</td><td class="num" data-label="Rodada 2">100%</td><td class="num" data-label="Rodada 3">84,21%</td></tr><tr><th scope="row">Fornecedor</th><td class="num" data-label="Rodada 1">N/A</td><td class="num" data-label="Rodada 2">100%</td><td class="num" data-label="Rodada 3">99,04%</td></tr><tr><th scope="row"><strong>Cadeia (cliente final)</strong></th><td class="num" data-label="Rodada 1"><strong>100%</strong></td><td class="num" data-label="Rodada 2"><strong>98,09%</strong></td><td class="num" data-label="Rodada 3"><strong>92,98%</strong></td></tr></tbody></table></div>
+    <h3 class="bars-grp">Nível de serviço da cadeia (cliente final)</h3>
+    <ul class="bars"><li><span class="bl">Rodada 1</span><span class="bt" aria-hidden="true"><span class="bf g" style="width:100.00%"></span></span><span class="bv">100%</span></li><li><span class="bl">Rodada 2</span><span class="bt" aria-hidden="true"><span class="bf g" style="width:98.09%"></span></span><span class="bv">98,09%</span></li><li><span class="bl">Rodada 3</span><span class="bt" aria-hidden="true"><span class="bf a" style="width:92.98%"></span></span><span class="bv">92,98%</span></li></ul>
+    <div class="callout">
+      <strong>Leitura</strong>
+      <p>Na Rodada 3, distribuidor (80,06%) e fábrica (84,21%) foram os elos que menos atenderam, e o serviço ao consumidor final caiu para 92,98%.</p>
+    </div>
+  </section>
+
+  <section id="estoques">
+    <h2>Estoques</h2>
+    <div class="table-wrap"><table class="stack"><caption class="sr-only">Estoques por rodada</caption><thead><tr><th scope="col">Rodada</th><th scope="col">Estoques iniciais</th><th scope="col">Como terminou</th></tr></thead><tbody><tr><th scope="row">Rodada 1</th><td class="num" data-label="Estoques iniciais">Varejista 10.000 · Distribuidor 5.000 · Fábrica 10.000</td><td class="num" data-label="Como terminou">Varejista com 8.827 unidades em estoque; distribuidor e fábrica seguiram com estoques muito altos</td></tr><tr><th scope="row">Rodada 2</th><td class="num" data-label="Estoques iniciais">Menores; reposição pedida ao longo das semanas</td><td class="num" data-label="Como terminou">Varejista sem estoque e com 23 unidades em atraso; distribuidor com 10, fábrica com 90 e fornecedor com 25 unidades</td></tr><tr><th scope="row">Rodada 3</th><td class="num" data-label="Estoques iniciais">Previsão de demanda disponível</td><td class="num" data-label="Como terminou">Todos sem estoque e com pedidos em atraso acumulados</td></tr></tbody></table></div>
+    <p class="sub">Na Rodada 1, o varejista usou parte do estoque para atender o consumidor e terminou com 8.827 unidades disponíveis. O excesso apareceu principalmente no distribuidor e na fábrica.</p>
+  </section>
+
+  <section id="demanda">
+    <h2>Demanda real e demanda pedida</h2>
+    <p class="sub">Demanda recebida é o que cada elo recebeu do elo seguinte. Pedido feito é o que ele solicitou ao elo anterior.</p>
+    <p><strong>Rodada 1.</strong> Somente o varejista recebeu demanda real do cliente, 1.173 unidades. Ninguém fez pedidos efetivos ao fornecedor, conforme a coluna S. A cadeia trabalhou com os estoques iniciais.</p>
+    <div class="table-wrap"><table class="stack"><caption class="sr-only">Demanda recebida e pedido feito, rodadas 2 e 3</caption><thead><tr><th scope="col">Participante</th><th scope="col">Rodada 2: recebeu</th><th scope="col">Rodada 2: pediu</th><th scope="col">Rodada 3: recebeu</th><th scope="col">Rodada 3: pediu</th></tr></thead><tbody><tr><th scope="row">Varejista</th><td class="num" data-label="Rodada 2: recebeu">1.204</td><td class="num" data-label="Rodada 2: pediu">1.177</td><td class="num" data-label="Rodada 3: recebeu">1.183</td><td class="num" data-label="Rodada 3: pediu">1.214</td></tr><tr><th scope="row">Distribuidor</th><td class="num" data-label="Rodada 2: recebeu">1.195</td><td class="num" data-label="Rodada 2: pediu">1.195</td><td class="num" data-label="Rodada 3: recebeu">1.364</td><td class="num" data-label="Rodada 3: pediu">1.364</td></tr><tr><th scope="row">Fábrica</th><td class="num" data-label="Rodada 2: recebeu">1.195</td><td class="num" data-label="Rodada 2: pediu">1.175</td><td class="num" data-label="Rodada 3: recebeu">1.324</td><td class="num" data-label="Rodada 3: pediu">1.155</td></tr><tr><th scope="row">Fornecedor</th><td class="num" data-label="Rodada 2: recebeu">1.075</td><td class="num" data-label="Rodada 2: pediu">1.200</td><td class="num" data-label="Rodada 3: recebeu">1.045</td><td class="num" data-label="Rodada 3: pediu">1.135</td></tr></tbody></table></div>
+    <h3>Rodada 2</h3>
+    <ul>
+      <li>O varejista recebeu 1.204 e pediu 1.177, 27 unidades a menos.</li>
+      <li>O distribuidor pediu exatamente o que recebeu: 1.195.</li>
+      <li>A fábrica recebeu 1.195 e pediu 1.175, 20 a menos.</li>
+      <li>O fornecedor pediu 1.200 tendo recebido 1.075: reposição acima da demanda, possivelmente para formar estoque de segurança.</li>
+    </ul>
+    <h3>Rodada 3</h3>
+    <ul>
+      <li>O varejista recebeu 1.183 e pediu 1.214, tentando aumentar a reposição.</li>
+      <li>O distribuidor recebeu 1.364 e pediu o mesmo, mas não recebeu produto suficiente para atender tudo.</li>
+      <li>A fábrica recebeu 1.324 e pediu só 1.155, 169 unidades abaixo.</li>
+      <li>O fornecedor recebeu 1.045 e pediu 1.135, tentando aumentar a reposição.</li>
+    </ul>
+  </section>
+
+  <section id="custos">
+    <h2>Custos</h2>
+    <div class="table-wrap"><table class="stack"><caption class="sr-only">Custo por participante e rodada</caption><thead><tr><th scope="col">Participante</th><th scope="col">Rodada 1</th><th scope="col">Rodada 2</th><th scope="col">Rodada 3</th></tr></thead><tbody><tr><th scope="row">Varejista</th><td class="num" data-label="Rodada 1">R$ 112.341</td><td class="num" data-label="Rodada 2">R$ 520</td><td class="num" data-label="Rodada 3">R$ 606</td></tr><tr><th scope="row">Distribuidor</th><td class="num" data-label="Rodada 1">R$ 60.000</td><td class="num" data-label="Rodada 2">R$ 110</td><td class="num" data-label="Rodada 3">R$ 1.652</td></tr><tr><th scope="row">Fábrica</th><td class="num" data-label="Rodada 1">R$ 120.000</td><td class="num" data-label="Rodada 2">R$ 1.035</td><td class="num" data-label="Rodada 3">R$ 1.584</td></tr><tr><th scope="row">Fornecedor</th><td class="num" data-label="Rodada 1">R$ 0</td><td class="num" data-label="Rodada 2">R$ 105</td><td class="num" data-label="Rodada 3">R$ 288</td></tr><tr><th scope="row"><strong>Cadeia</strong></th><td class="num" data-label="Rodada 1"><strong>R$ 292.341</strong></td><td class="num" data-label="Rodada 2"><strong>R$ 1.770</strong></td><td class="num" data-label="Rodada 3"><strong>R$ 4.130</strong></td></tr></tbody></table></div>
+    <h3 class="bars-grp">Custo total da cadeia por rodada</h3>
+    <ul class="bars"><li><span class="bl">Rodada 1</span><span class="bt" aria-hidden="true"><span class="bf r" style="width:100.00%"></span></span><span class="bv">R$ 292.341</span></li><li><span class="bl">Rodada 2</span><span class="bt" aria-hidden="true"><span class="bf b" style="width:0.61%"></span></span><span class="bv">R$ 1.770</span></li><li><span class="bl">Rodada 3</span><span class="bt" aria-hidden="true"><span class="bf b" style="width:1.41%"></span></span><span class="bv">R$ 4.130</span></li></ul>
+    <p class="sub">Escala linear: as Rodadas 2 e 3 quase não aparecem ao lado da Rodada 1. Custo acumulado das três rodadas: <strong>R$ 298.241</strong>.</p>
+    <h3 class="bars-grp">Rodadas 2 e 3 em escala própria</h3>
+    <ul class="bars"><li><span class="bl">Varejista · R2</span><span class="bt" aria-hidden="true"><span class="bf b" style="width:31.48%"></span></span><span class="bv">R$ 520</span></li><li><span class="bl">Varejista · R3</span><span class="bt" aria-hidden="true"><span class="bf a" style="width:36.68%"></span></span><span class="bv">R$ 606</span></li><li><span class="bl">Distribuidor · R2</span><span class="bt" aria-hidden="true"><span class="bf b" style="width:6.66%"></span></span><span class="bv">R$ 110</span></li><li><span class="bl">Distribuidor · R3</span><span class="bt" aria-hidden="true"><span class="bf a" style="width:100.00%"></span></span><span class="bv">R$ 1.652</span></li><li><span class="bl">Fábrica · R2</span><span class="bt" aria-hidden="true"><span class="bf b" style="width:62.65%"></span></span><span class="bv">R$ 1.035</span></li><li><span class="bl">Fábrica · R3</span><span class="bt" aria-hidden="true"><span class="bf a" style="width:95.88%"></span></span><span class="bv">R$ 1.584</span></li><li><span class="bl">Fornecedor · R2</span><span class="bt" aria-hidden="true"><span class="bf b" style="width:6.36%"></span></span><span class="bv">R$ 105</span></li><li><span class="bl">Fornecedor · R3</span><span class="bt" aria-hidden="true"><span class="bf a" style="width:17.43%"></span></span><span class="bv">R$ 288</span></li></ul>
+    <div class="callout red">
+      <strong>Dois cuidados ao ler estes números</strong>
+      <p>O custo da Rodada 1 (R$ 292.341) é quase todo o custo de ter começado com estoques gigantes (10.000, 5.000 e 10.000 unidades): é o preço de não conhecer a demanda, não de operar mal.</p>
+      <p>Entre as Rodadas 2 e 3 o custo mais que dobrou (R$ 1.770 para R$ 4.130) e o serviço ao cliente caiu (98,09% para 92,98%). Ter previsão de demanda não bastou: faltou coordenar estoques e pedidos entre os elos.</p>
+    </div>
+  </section>
+
+  <section id="turma">
+    <h2>Resultado de todos os grupos</h2>
+    <p class="sub">Comparamos os resultados de todos os grupos, expostos na parede, em três categorias.</p>
+    <div class="grid">
+      <div class="card"><h3>Consolidado</h3><p>Há diferenças significativas entre os grupos: alguns geriram melhor a cadeia, outros tiveram mais dificuldade para equilibrar estoques e atender pedidos. O padrão é que o desempenho depende do planejamento, da integração e das decisões de cada participante ao longo das rodadas.</p></div>
+      <div class="card"><h3>Custos</h3><p>Alguns grupos mantiveram custos baixos e outros tiveram gastos elevados. Estoque em excesso encarece a armazenagem e a falta de produto gera atraso e pedido não atendido: os dois extremos prejudicam financeiramente a cadeia.</p></div>
+      <div class="card"><h3>Demandas</h3><p>Os grupos se comportaram de modos diferentes ao pedir e planejar a reposição. Em vários casos, o pedido foi maior ou menor que a demanda real do consumidor, e essa diferença causa excesso ou falta de produto na cadeia.</p></div>
+    </div>
+    <div class="callout">
+      <strong>Pontos críticos da cadeia</strong>
+      <p>Falta de integração, de comunicação e de planejamento entre os participantes. No jogo, uma decisão inadequada em um elo afetou a cadeia inteira, com excesso ou falta de produto e custos maiores.</p>
+    </div>
+  </section>
+
+  <section id="learning">
+    <h2>Resultado do Learning Café</h2>
+    <p>Pergunta debatida: <em>qual a importância da informação versus a comunicação na cadeia de suprimentos?</em></p>
+    <div class="card">
+      <p>A <strong>informação</strong> fornece os dados para decidir: pedidos, demanda e níveis de estoque. A <strong>comunicação</strong> permite compartilhar esses dados de forma clara e eficiente entre todos os participantes.</p>
+      <p>Aprendizado principal: <strong>não basta ter a informação, é preciso que todos os envolvidos tenham acesso a ela</strong> para alinhar as decisões e evitar problemas na cadeia.</p>
+    </div>
+    <figure class="fig-foto">
+      <img src="assets/learning-cafe.webp" width="900" height="1321" loading="lazy" decoding="async" alt="Foto do cartaz manuscrito do Learning Café, com a pergunta sobre informação versus comunicação na cadeia de suprimentos e as anotações do grupo.">
+      <figcaption>Cartaz do Learning Café, com as anotações do grupo.</figcaption>
+    </figure>
+  </section>
+
+  <section id="yakult">
+    <h2>E a Yakult com isso?</h2>
+    <p class="sub">Pergunta motivadora: qual a importância da integração da cadeia de suprimentos e do pensamento sistêmico para o nosso produto?</p>
+    <div class="card">
+      <p>Integrar a cadeia e pensar de forma sistêmica garante que todas as etapas, da compra do leite à entrega do frasco, funcionem em conjunto. A troca de informações e o planejamento evitam falta ou excesso de produto, reduzem custos e melhoram o atendimento ao consumidor, e todos passam a trabalhar de forma coordenada pelo melhor resultado da cadeia inteira.</p>
+    </div>
+    <h3>Três pontos que o jogo ilumina na Yakult</h3>
+    <ul>
+      <li><strong>Produto perecível.</strong> Como a Yakult depende de cadeia de frio (Etapa 1, Figura 2), estoque parado tem custo de armazenagem refrigerada e prazo de validade correndo. Na Rodada 1 o excesso só gerou custo; com um produto perecível, ele também pode virar perda.</li>
+      <li><strong>Fábrica única.</strong> A fábrica de Lorena abastece todos os canais. No jogo, a fábrica foi um dos elos com pior serviço na Rodada 3 (84,21%). Na Yakult, uma falha nesse elo se espalharia por toda a cadeia.</li>
+      <li><strong>Cadeia mais curta.</strong> O jogo tem quatro elos. Na Yakult há dois canais de venda (porta a porta e varejo), com menos intermediários que no jogo. Menos elos tendem a reduzir a distorção dos pedidos de um elo para o outro, mas a coordenação entre fábrica e canais continua essencial.</li>
+    </ul>
+    <p class="sub">Esta seção é uma leitura do grupo a partir do jogo e dos dados da Etapa 1. Não há dados internos da Yakult sobre estoques ou pedidos.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Projeto Final · Tópicos em Engenharia de Produção na Indústria de Alimentos · UFABC<br>
+    Profa. Carolina Corrêa de Carvalho<br>
+    Caroline Araujo · Glauber Carmo · Rafael Tashiro · Felipe Lewis · Caio</p>
+    <p><a href="index.html">← Voltar ao início</a> · <a href="etapa-1.html">Etapa 1</a></p>
+  </div>
+</footer>
+
+<script src="assets/header.js" defer></script>
+<script src="assets/milk.js" defer></script>
+</body>
+</html>
