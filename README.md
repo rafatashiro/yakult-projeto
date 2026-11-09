@@ -14,6 +14,7 @@ O projeto é entregue em etapas. Cada etapa vira uma página nova do site.
 | --- | --- | --- |
 | 1 | Cadeia produtiva, cadeia de suprimentos e cadeia de valor, com 3 diagramas, comparativo, insights para o engenheiro de gestão, limitações do estudo e fontes | Entregue |
 | 2 | Beer Game: regras, estratégia, nível de serviço, estoques, demanda e custos por rodada, Learning Café e relação com a cadeia da Yakult | Entregue |
+| 3 | KPIs, indicadores e parâmetros de gestão ao longo da cadeia (mapa por fase, quadro com fontes, S&OP e PCP, lacunas). Também há PDF para entrega | Entregue |
 
 ## Estrutura
 
@@ -21,6 +22,7 @@ O projeto é entregue em etapas. Cada etapa vira uma página nova do site.
 index.html            página inicial (apresentação e lista de etapas)
 etapa-1.html          conteúdo completo da Etapa 1
 etapa-2.html          Etapa 2 (Beer Game)
+etapa-3.html          Etapa 3 (KPIs e parâmetros de gestão)
 assets/
   style.css           estilos de todo o site
   diagramas.js        fonte única dos diagramas (veja abaixo)
@@ -29,6 +31,7 @@ assets/
   fonts/              fonte Inter hospedada junto com o site (licença OFL)
   yakult-frasco.webp  imagem do frasco usada no título e no cabeçalho
   learning-cafe.webp  foto do cartaz do Learning Café (Etapa 2)
+  etapa-3.pdf         versão em PDF da Etapa 3 (gerada a partir da página, veja abaixo)
   favicon.png, apple-touch-icon.png
 ```
 
@@ -43,6 +46,10 @@ Site estático: HTML, CSS e JavaScript puros, **sem build e sem dependências**.
 **Cores:** variáveis no início de `assets/style.css`. A paleta é única, tom de leite fermentado, e não muda com o modo escuro do aparelho.
 
 **Nova etapa:** crie `etapa-2.html` com o mesmo cabeçalho, adicione um cartão em `index.html` e atualize a tabela acima. Evite alterar a Etapa 1 depois da entrega.
+
+## PDF da Etapa 3
+
+O PDF é gerado da própria página (`etapa-3.html`), usando o estilo de impressão do `style.css` (A4 paisagem). Para refazer depois de editar a página: abra no Chrome, **Imprimir → Salvar como PDF**, paisagem, ativando "Gráficos em segundo plano", e salve como `assets/etapa-3.pdf`.
 
 ## Publicação (Vercel)
 
