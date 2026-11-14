@@ -14,7 +14,7 @@ O projeto é entregue em etapas. Cada etapa vira uma página nova do site.
 | --- | --- | --- |
 | 1 | Cadeia produtiva, cadeia de suprimentos e cadeia de valor, com 3 diagramas, comparativo, insights para o engenheiro de gestão, limitações do estudo e fontes | Entregue |
 | 2 | Beer Game: regras, estratégia, nível de serviço, estoques, demanda e custos por rodada, Learning Café e relação com a cadeia da Yakult | Entregue |
-| 3 | KPIs ao longo da cadeia: mapa por fase, 8 KPIs (2 por ator) com tabela síntese e perguntas finais, levantamento de 66 indicadores, S&OP e PCP, lacunas e 30 fontes. Também há PDF para entrega | Entregue |
+| 3 | KPIs ao longo da cadeia: mapa por fase, 8 KPIs (2 por ator) com tabela síntese e perguntas finais, levantamento de 66 indicadores, S&OP e PCP, lacunas e 26 fontes. Também há PDF para entrega | Entregue |
 
 ## Estrutura
 
