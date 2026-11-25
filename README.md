@@ -24,6 +24,7 @@ etapa-1.html          conteúdo completo da Etapa 1
 etapa-2.html          Etapa 2 (Beer Game)
 etapa-3.html          Etapa 3 (KPIs e parâmetros de gestão)
 etapa-4.html          Etapa 4 (tendências, desafios e sustentabilidade)
+apresentacao.html     apresentação final (slides como imagens + PDF)
 assets/
   style.css           estilos de todo o site
   diagramas.js        fonte única dos diagramas (veja abaixo)
@@ -34,6 +35,8 @@ assets/
   learning-cafe.webp  foto do cartaz do Learning Café (Etapa 2)
   etapa-3.pdf         versão em PDF da Etapa 3 (gerada a partir da página, veja abaixo)
   etapa-4.pdf         PDF da Etapa 4 como entregue à professora
+  apresentacao-final.pdf  PDF da apresentação final (sem as notas do orador)
+  apresentacao/       slide-01.webp … slide-11.webp, imagens exibidas em apresentacao.html
   favicon.png, apple-touch-icon.png
 ```
 

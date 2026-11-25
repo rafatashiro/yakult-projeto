@@ -471,3 +471,10 @@ table.sint td, table.sint th { vertical-align: top; }
   .nav { font-size: 12px; gap: 0; }
   .nav a { padding: 5px 7px; }
 }
+
+/* Apresentação final: slides como imagens */
+.slides { display: grid; gap: 18px; margin-top: 18px; }
+.slides figure { margin: 0; }
+.slides img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+.slides figcaption { margin-top: 6px; font-size: 14px; color: var(--muted, #6b6259); }
+@media (min-width: 900px) { .slides { grid-template-columns: 1fr 1fr; } }
