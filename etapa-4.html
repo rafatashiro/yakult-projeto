@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etapa 4 · Yakult - Tópicos em Eng. Prod. Ind. Alimentos</title>
+  <meta name="description" content="Etapa 4 do projeto final: reflexões do grupo sobre tendências e desafios da indústria de laticínios, sustentabilidade e logística reversa, com a versão em PDF entregue.">
+  <meta name="theme-color" content="#fbf6e7">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Etapa 4 · Yakult - Tópicos em Eng. Prod. Ind. Alimentos">
+  <meta property="og:description" content="Etapa 4 do projeto final: reflexões do grupo sobre tendências e desafios da indústria de laticínios, sustentabilidade e logística reversa, com a versão em PDF entregue.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/style.css">
+  <!-- Vercel Web Analytics (equivale ao inject() do pacote; só funciona no site publicado na Vercel) -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<div class="milk-bg milk-bg--soft" aria-hidden="true">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="milk-grad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" class="milk-stop-a"/>
+        <stop offset="1" class="milk-stop-b"/>
+      </linearGradient>
+    </defs>
+  </svg>
+  <svg class="milk-layer" data-ay="26" data-ax="18" data-per="520" data-ph="0.0" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-back" d="M-300 -300 H1040 V0 C1064 130 1016 214 920 274 C816 338 744 462 586 452 C440 442 392 342 252 358 C152 367 74 446 0 410 L-300 410 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="40" data-ax="30" data-per="430" data-ph="1.1" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-glow g2" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-glow g3" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+    <path class="milk-front" d="M-300 -300 H1010 V0 C1030 110 990 190 900 246 C800 308 730 432 580 424 C440 416 390 318 250 330 C150 339 70 412 0 380 L-300 380 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="70" data-ax="50" data-per="340" data-ph="2.2" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-glow g2" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-glow g3" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+    <path class="milk-front" d="M1090 150 C1128 82 1240 76 1284 142 C1324 202 1294 268 1222 290 C1148 312 1048 258 1090 150 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="100" data-ax="70" data-per="280" data-ph="0.7" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-glow g2" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-glow g3" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <path class="milk-front" d="M1276 150 C1310 124 1364 132 1382 170 C1396 202 1368 232 1332 234 C1298 236 1260 182 1276 150 Z"/>
+    <circle class="milk-glow g1" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g2" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g3" cx="1050" cy="66" r="9"/>
+    <circle class="milk-front" cx="1050" cy="66" r="9"/>
+    <circle class="milk-glow g1" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g2" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g3" cx="1040" cy="248" r="14"/>
+    <circle class="milk-front" cx="1040" cy="248" r="14"/>
+    <circle class="milk-glow g1" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g2" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g3" cx="1380" cy="84" r="11"/>
+    <circle class="milk-front" cx="1380" cy="84" r="11"/>
+    <circle class="milk-glow g1" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g2" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g3" cx="1230" cy="40" r="6"/>
+    <circle class="milk-front" cx="1230" cy="40" r="6"/>
+    <circle class="milk-glow g1" cx="1404" cy="270" r="7"/>
+    <circle class="milk-glow g2" cx="1404" cy="270" r="7"/>
+    <circle class="milk-glow g3" cx="1404" cy="270" r="7"/>
+    <circle class="milk-front" cx="1404" cy="270" r="7"/>
+  </svg>
+  <svg class="milk-layer" data-ay="30" data-ax="24" data-per="560" data-ph="3.4" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-back" d="M1800 1250 H430 V900 C410 790 460 704 550 654 C650 596 730 482 890 490 C1030 498 1080 592 1220 580 C1320 572 1400 504 1440 534 L1800 534 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="46" data-ax="36" data-per="450" data-ph="4.2" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-glow g2" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-glow g3" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+    <path class="milk-front" d="M1800 1250 H470 V900 C450 800 498 726 584 680 C678 628 754 524 902 530 C1032 536 1084 622 1216 612 C1314 604 1390 544 1440 570 L1800 570 Z"/>
+  </svg>
+  <svg class="milk-layer" data-ay="90" data-ax="60" data-per="300" data-ph="5.1" viewBox="0 0 1440 900" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg" focusable="false">
+    <path class="milk-glow g1" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g2" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g3" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-front" d="M110 690 C146 628 252 624 290 686 C324 742 296 800 228 818 C158 836 76 766 110 690 Z"/>
+    <path class="milk-glow g1" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-glow g2" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-glow g3" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <path class="milk-front" d="M300 760 C326 738 372 744 386 776 C396 804 372 828 342 830 C312 832 282 792 300 760 Z"/>
+    <circle class="milk-glow g1" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g2" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g3" cx="470" cy="700" r="10"/>
+    <circle class="milk-front" cx="470" cy="700" r="10"/>
+    <circle class="milk-glow g1" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g2" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g3" cx="90" cy="610" r="7"/>
+    <circle class="milk-front" cx="90" cy="610" r="7"/>
+    <circle class="milk-glow g1" cx="420" cy="840" r="12"/>
+    <circle class="milk-glow g2" cx="420" cy="840" r="12"/>
+    <circle class="milk-glow g3" cx="420" cy="840" r="12"/>
+    <circle class="milk-front" cx="420" cy="840" r="12"/>
+  </svg>
+</div>
+
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img class="brand-icon" src="assets/yakult-frasco.webp" width="11" height="22" alt="" decoding="async"><span class="brand-name">Yakult Trad. 80&nbsp;ml</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="etapa-1.html">Etapa 1</a>
+      <a href="etapa-2.html">Etapa 2</a>
+      <a href="etapa-3.html">Etapa 3</a>
+      <a href="etapa-4.html" aria-current="page">Etapa 4</a>
+    </nav>
+  </div>
+  <nav class="tabs" aria-label="Seções da Etapa 4">
+    <div class="wrap tabs-row">
+      <a href="#pedido">O que foi pedido</a>
+      <a href="#respostas">Nossas respostas</a>
+      <a href="#materiais">Materiais</a>
+    </div>
+  </nav>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="hero">
+    <span class="eyebrow">Etapa 4 · Tendências, desafios e sustentabilidade</span>
+    <h1>O futuro da indústria de laticínios e a Yakult</h1>
+    <p class="lede">Reflexões do grupo sobre o material de tendências e desafios do mundo contemporâneo e futuro do produto, cadeias sustentáveis e logística reversa. Abaixo estão o que a professora pediu e o texto que entregamos.</p>
+    <a class="dl-pdf" href="assets/etapa-4.pdf" target="_blank" rel="noopener">Abrir o PDF entregue</a>
+  </section>
+
+  <section id="pedido">
+    <h2>O que foi pedido</h2>
+    <p class="sub">Consolidação do aprendizado da Etapa 4: em grupo, refletir sobre o material trazido pelo grupo, em 30 minutos.</p>
+    <div class="card"><ol><li>Quais são as tendências e desafios contemporâneos e futuros da indústria do seu produto?</li><li>O que chamou a atenção do grupo no material e por quê?</li><li>Como acontece ou não a cadeia sustentável ou a logística reversa do seu produto?</li><li>Como você, como engenheiro de gestão, pode estar melhor preparado para atuar nesta indústria?</li></ol></div>
+  </section>
+
+  <section id="respostas">
+    <h2>Nossas respostas</h2>
+    <p class="sub">Texto entregue à professora, reproduzido sem alterações. O PDF original está no botão do início da página.</p>
+    <div class="card"><h3>1. Quais são as tendências e desafios contemporâneos e futuros da indústria do seu produto?</h3><p>As principais tendências são o uso de novas tecnologias, inteligência artificial e máquinas modernas para melhorar a produção, garantir a qualidade dos alimentos e evitar desperdícios.</p><p>Outro ponto muito importante é a sustentabilidade, como reduzir o consumo de água, diminuir o uso de plástico e controlar a emissão de gases poluentes.</p><p>Um dos desafios da indústria de laticínios é conseguir produzir cada vez mais e com qualidade, mas causando menos impactos ao meio ambiente.</p><p>No caso da Yakult, isso envolve buscar embalagens mais sustentáveis e processos de fabricação que desperdicem menos recursos.</p></div><div class="card"><h3>2. O que chamou a atenção do grupo no material e por quê?</h3><p>O que mais chamou nossa atenção foi perceber que a sustentabilidade apareceu como o fator de maior influência na adoção de novas tecnologias no estudo sobre a Indústria 5.0.</p><p>Também nos chamou a atenção o fato de a Yakult ter estabelecido metas ambientais, como reduzir em 30% as emissões de gases do efeito estufa e em 30% o plástico das embalagens, ou torná-las recicláveis, no Japão até 2030.</p><p>Isso mostra que as empresas precisam pensar não apenas na qualidade e na venda dos produtos, mas também nas consequências da sua produção para o meio ambiente.</p></div><div class="card"><h3>3. Como acontece ou não a cadeia sustentável ou a logística reversa do seu produto?</h3><p>No caso do Yakult, a sustentabilidade pode acontecer em várias etapas, desde a fabricação até a distribuição do produto.</p><p>A empresa apresenta metas para diminuir o consumo de água, reduzir o plástico das embalagens, diminuir as emissões de gases e melhorar a reciclagem dos resíduos.</p><p>Porém, os materiais que estudamos não explicam detalhadamente como funciona a coleta e a devolução dos frascos de Yakult depois do consumo, ou seja, não comprovam a existência de um sistema de logística reversa.</p><p>Uma oportunidade de melhoria seria incentivar a coleta e a reciclagem dos frascos vazios, para que o plástico possa ser reaproveitado e não seja descartado incorretamente.</p></div><div class="card"><h3>4. Como você, como engenheiro de gestão, pode estar melhor preparado para atuar nesta indústria?</h3><p>Como futuros engenheiros de gestão, precisamos estar preparados para trabalhar com tecnologia, planejamento e sustentabilidade.</p><p>Podemos contribuir buscando maneiras de melhorar os processos de produção, reduzir desperdícios, economizar água e energia, controlar a qualidade dos produtos e diminuir os impactos ambientais.</p><p>Também é importante acompanhar as inovações tecnológicas e desenvolver soluções para melhorar a logística, a reciclagem das embalagens e a relação com fornecedores.</p><p>Assim, podemos ajudar a empresa a produzir de forma mais eficiente, competitiva e sustentável.</p></div>
+  </section>
+
+  <section id="materiais">
+    <h2>Materiais usados</h2>
+    <p class="sub">Dois materiais trazidos pelo grupo: um sobre tecnologia e Indústria 5.0 em laticínios, outro sobre as metas ambientais da Yakult.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Tecnologia e Indústria 5.0</span>
+        <h3>Drivers of Industry 5.0 technologies in dairy industry</h3>
+        <p>Malik, M.; Mor, R. S.; Gahlawat, V. K.; Hassoun, A.; Jagtap, S. (2025). <i>Sustainable Food Technology</i>, v. 3, p. 1556 a 1568. <a href="https://doi.org/10.1039/d5fb00156k" target="_blank" rel="noopener">DOI 10.1039/d5fb00156k</a>.</p>
+        <p>Pesquisa com 327 profissionais de laticínios. No ranking da regressão do artigo, sustentabilidade e impacto ambiental teve o maior coeficiente (0,283) entre os cinco fatores de adoção.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Cadeia sustentável</span>
+        <h3>Yakult pledges to slash plastic and GHGs on road to carbon neutrality by 2050</h3>
+        <p>Gore-Langton, L. (2021). Packaging Insights, 21/07/2021. <a href="https://www.packaginginsights.com/news/yakult-pledges-to-slash-plastic-and-ghgs-on-road-to-carbon-neutrality-by-2050.html" target="_blank" rel="noopener">Ler o artigo</a>.</p>
+        <p>Metas da Yakult para o Japão em 2030, em relação ao ano fiscal de 2018: reduzir em 30% as emissões de gases de efeito estufa, reduzir em 30% o plástico de embalagens (ou torná-lo reciclável) e reduzir em 10% a água nas fábricas de laticínios, por unidade produzida.</p>
+      </div>
+    </div>
+    <h3>Limites dos materiais</h3>
+    <ul>
+      <li>As metas da Yakult são do Japão e foram anunciadas em 2021. O artigo não diz se foram cumpridas nem trata do Brasil.</li>
+      <li>O estudo sobre Indústria 5.0 é sobre laticínios em geral, com a maior parte dos participantes da Índia, e não menciona a Yakult.</li>
+      <li>Nenhum dos dois materiais descreve coleta ou devolução de frascos depois do consumo, o que sustenta a resposta 3.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Projeto Final · Tópicos em Engenharia de Produção na Indústria de Alimentos · UFABC<br>
+    Profa. Carolina Corrêa de Carvalho<br>
+    Caroline Araujo · Giovanna Gama · Glauber Carmo · Rafael Tashiro</p>
+    <p><a href="index.html">← Voltar ao início</a> · <a href="etapa-3.html">Etapa 3</a></p>
+  </div>
+</footer>
+
+<script src="assets/header.js" defer></script>
+<script src="assets/milk.js" defer></script>
+</body>
+</html>

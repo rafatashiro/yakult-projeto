@@ -23,6 +23,7 @@ index.html            página inicial (apresentação e lista de etapas)
 etapa-1.html          conteúdo completo da Etapa 1
 etapa-2.html          Etapa 2 (Beer Game)
 etapa-3.html          Etapa 3 (KPIs e parâmetros de gestão)
+etapa-4.html          Etapa 4 (tendências, desafios e sustentabilidade)
 assets/
   style.css           estilos de todo o site
   diagramas.js        fonte única dos diagramas (veja abaixo)
@@ -32,6 +33,7 @@ assets/
   yakult-frasco.webp  imagem do frasco usada no título e no cabeçalho
   learning-cafe.webp  foto do cartaz do Learning Café (Etapa 2)
   etapa-3.pdf         versão em PDF da Etapa 3 (gerada a partir da página, veja abaixo)
+  etapa-4.pdf         PDF da Etapa 4 como entregue à professora
   favicon.png, apple-touch-icon.png
 ```
 

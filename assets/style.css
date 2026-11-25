@@ -465,3 +465,9 @@ table.sint td, table.sint th { vertical-align: top; }
   .q3 dd { font-size: 10.5px; }
   .q3 dt { font-size: 9px; margin-top: 5px; }
 }
+
+/* telas muito estreitas: cinco links no menu precisam caber */
+@media (max-width: 360px) {
+  .nav { font-size: 12px; gap: 0; }
+  .nav a { padding: 5px 7px; }
+}
